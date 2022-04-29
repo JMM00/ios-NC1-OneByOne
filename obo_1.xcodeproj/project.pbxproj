@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0346A8281C177000BF669D /* ModalExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346A7281C177000BF669D /* ModalExView.swift */; };
 		EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89C281AD73100DC61B1 /* obo_1App.swift */; };
 		EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89E281AD73100DC61B1 /* ContentView.swift */; };
 		EC37E8A1281AD73200DC61B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37E8A0281AD73200DC61B1 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC0346A7281C177000BF669D /* ModalExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExView.swift; sourceTree = "<group>"; };
 		EC37E899281AD73100DC61B1 /* obo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37E89C281AD73100DC61B1 /* obo_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = obo_1App.swift; sourceTree = "<group>"; };
 		EC37E89E281AD73100DC61B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				EC37E8AA281AE04400DC61B1 /* MainView.swift */,
 				EC987DE3281BB204006FAEB1 /* ModalView.swift */,
 				EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */,
+				EC0346A7281C177000BF669D /* ModalExView.swift */,
 				EC987DE5281BB220006FAEB1 /* ModalTopView.swift */,
 				EC37E8AE281AF75500DC61B1 /* OvalView.swift */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
+				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
 				EC37E8AF281AF75500DC61B1 /* OvalView.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,

@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var showModal = false
+    
     var body: some View {
-        Text("탭 뉴유유융")
-        
+        Text("탭 main view")
+            .frame(width: 300, height: 300, alignment: .center)
+            .background(Color.blue)
+            .onTapGesture {
+                if !showModal {
+                    self.showModal = true
+                }
+                
+            }
+            .sheet(isPresented: self.$showModal) {ModalView()}
     }
 
 }

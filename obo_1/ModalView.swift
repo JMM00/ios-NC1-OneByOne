@@ -9,47 +9,66 @@ import SwiftUI
 
 struct ModalView: View {
     var body: some View {
-        VStack {
-            ModalTopView()
-            Divider().frame(width: 350)
-            
-            Text("오늘의 단어")
-                .font(.system(size: 20, weight: .medium))
-                .frame(width: 335, height: 24, alignment: .leading)
-                .foregroundColor(Color.gray)
-                .padding()
-            ModalWordView()
-            ModalWordView()
-            
-            Divider().frame(width: 350)
-            
-            Text("오늘의 핵심 표현")
-                .font(.system(size: 20, weight: .medium))
-                .frame(width: 335, height: 24, alignment: .leading)
-                .foregroundColor(Color.gray)
-                .padding()
-            List{
-                Text("take another look at -")
-                    .font(.system(size: 20, weight: .regular))
-                    .frame(width: 330, height: 24, alignment: .leading)
-                    .foregroundColor(.black)
-                Text("I have to take another look at book.")
-                    .font(.system(size: 20, weight: .regular))
+        ScrollView (.vertical, showsIndicators: false, content:  {
+            VStack {
+                ModalTopView()
+                Divider().frame(width: 350)
+                
+                Text("오늘의 단어")
+                    .font(.system(size: 20, weight: .medium))
                     .frame(width: 335, height: 24, alignment: .leading)
                     .foregroundColor(Color.gray)
-                Text("take another look at -")
-                    .font(.system(size: 20, weight: .medium))
-                    .frame(width: 330, height: 24, alignment: .leading)
-                    .foregroundColor(.black)
-                Text("take another look at -")
-                    .font(.system(size: 20, weight: .medium))
-                    .frame(width: 330, height: 24, alignment: .leading)
-                    .foregroundColor(.black)
+                    .padding()
+                ModalWordView()
+                ModalWordView()
                 
-            }
-            
-            
-        }
+                Divider().frame(width: 350)
+                
+                Text("오늘의 핵심 표현")
+                    .font(.system(size: 20, weight: .medium))
+                    .frame(width: 335, height: 24, alignment: .leading)
+                    .foregroundColor(Color.gray)
+                    .padding()
+                Text("take another look at -")
+                    .font(.system(size: 20, weight: .regular))
+                    .frame(width: 330, height: 24, alignment: .leading)
+                    .foregroundColor(.black)
+                    .padding(.bottom)
+                ForEach(1..<4) { number in
+                    ModalExView()
+                }
+/*
+                Text("I have to take another look at book.")
+                    .font(.system(size: 18, weight: .regular))
+                    .frame(width: 330, height: 24, alignment: .leading)
+                    .foregroundColor(Color.gray)
+                Text("I wanted to take another look at this view.")
+                    .font(.system(size: 18, weight: .regular))
+                    .frame(width: 330, height: 24, alignment: .leading)
+                    .foregroundColor(Color.gray)
+*/
+/*
+                Text("I hope taking another look at our family in our house where in my ground")
+                    .font(.system(size: 18, weight: .regular))
+                    .frame(width: 330, height: 24, alignment: .leading)
+                    .foregroundColor(Color.gray)
+*/
+                
+/*
+                List{
+                    Text("take another look at -")
+                        .font(.system(size: 20, weight: .regular))
+                        .frame(width: 330, height: 24, alignment: .leading)
+                        .foregroundColor(.black)
+                    Text("I have to take another look at book.")
+                        .font(.system(size: 18, weight: .regular))
+                        .frame(width: 335, height: 24, alignment: .leading)
+                        .foregroundColor(Color.gray)
+                }.listStyle(InsetListStyle())
+                    .listRowSeparator(.hidden)
+ */
+            }//vstack
+        }) //scrollview
     }
 }
 
