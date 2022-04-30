@@ -11,11 +11,14 @@ let sentenceArr: [String] = ["I just wanted to take another look at you.","The g
 let movTitleArr: [String] = ["A star is born","Moulin Rouge"]
 struct mainSentenceView: View {
     var body: some View {
-        VStack (alignment: .center, spacing: 30){
+        VStack (alignment: .center, spacing: 0){
             Text("\"")
                 .font(.system(size: 60, weight: .bold))
+                .frame(height: 6, alignment: .center)
+                .padding(.top)
             Text(sentenceArr[0])
-                .font(.system(size: 30, weight: .bold)).frame(width: 250, height: 200, alignment: .center)
+                .font(.system(size: 30, weight: .bold))
+                .frame(width: 250, height: 200, alignment: .center)
             Text(movTitleArr[0])
             Divider().frame(width: 100)
         }

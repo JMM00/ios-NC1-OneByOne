@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var showModal = false
+    @State private var showSheetView = false
     
     var body: some View {
-        Text("탭 main view")
-            .frame(width: 300, height: 300, alignment: .center)
+        mainSentenceView()
+            .frame(width: 300, height: 400, alignment: .center)
             .background(Color.blue)
             .onTapGesture {
-                if !showModal {
-                    self.showModal = true
+                if !showSheetView {
+                    self.showSheetView = true
                 }
                 
             }
-            .sheet(isPresented: self.$showModal) {ModalView()}
+            .sheet(isPresented: self.$showSheetView) {ModalView(showSheetView: self.$showSheetView)}
     }
 
 }

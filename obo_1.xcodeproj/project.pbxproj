@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		EC0346A8281C177000BF669D /* ModalExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346A7281C177000BF669D /* ModalExView.swift */; };
+		EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AB281C337D00BF669D /* LogRawView.swift */; };
+		EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AD281C34DC00BF669D /* LogBulletView.swift */; };
+		EC0346B2281C416300BF669D /* testShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B1281C416300BF669D /* testShape.swift */; };
+		EC0346B5281C497700BF669D /* writingEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B4281C497700BF669D /* writingEditView.swift */; };
+		EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B6281C499A00BF669D /* LogDetailView.swift */; };
+		EC0346BB281D124400BF669D /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BA281D124400BF669D /* TagView.swift */; };
+		EC0346BF281D23E800BF669D /* GeometryReaderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */; };
 		EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89C281AD73100DC61B1 /* obo_1App.swift */; };
 		EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89E281AD73100DC61B1 /* ContentView.swift */; };
 		EC37E8A1281AD73200DC61B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37E8A0281AD73200DC61B1 /* Assets.xcassets */; };
@@ -23,6 +30,13 @@
 
 /* Begin PBXFileReference section */
 		EC0346A7281C177000BF669D /* ModalExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExView.swift; sourceTree = "<group>"; };
+		EC0346AB281C337D00BF669D /* LogRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRawView.swift; sourceTree = "<group>"; };
+		EC0346AD281C34DC00BF669D /* LogBulletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBulletView.swift; sourceTree = "<group>"; };
+		EC0346B1281C416300BF669D /* testShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testShape.swift; sourceTree = "<group>"; };
+		EC0346B4281C497700BF669D /* writingEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writingEditView.swift; sourceTree = "<group>"; };
+		EC0346B6281C499A00BF669D /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		EC0346BA281D124400BF669D /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderBootcamp.swift; sourceTree = "<group>"; };
 		EC37E899281AD73100DC61B1 /* obo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37E89C281AD73100DC61B1 /* obo_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = obo_1App.swift; sourceTree = "<group>"; };
 		EC37E89E281AD73100DC61B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +62,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC0346A9281C2FDD00BF669D /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				EC987DE5281BB220006FAEB1 /* ModalTopView.swift */,
+				EC987DE3281BB204006FAEB1 /* ModalView.swift */,
+				EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */,
+				EC0346A7281C177000BF669D /* ModalExView.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		EC0346AA281C2FF900BF669D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */,
+				EC37E8AA281AE04400DC61B1 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EC0346B3281C494400BF669D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				EC37E8AC281AE81C00DC61B1 /* LogView.swift */,
+				EC0346AD281C34DC00BF669D /* LogBulletView.swift */,
+				EC0346AB281C337D00BF669D /* LogRawView.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		EC37E890281AD73100DC61B1 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +113,15 @@
 			children = (
 				EC37E89C281AD73100DC61B1 /* obo_1App.swift */,
 				EC37E89E281AD73100DC61B1 /* ContentView.swift */,
-				EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */,
-				EC37E8AC281AE81C00DC61B1 /* LogView.swift */,
-				EC37E8AA281AE04400DC61B1 /* MainView.swift */,
-				EC987DE3281BB204006FAEB1 /* ModalView.swift */,
-				EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */,
-				EC0346A7281C177000BF669D /* ModalExView.swift */,
-				EC987DE5281BB220006FAEB1 /* ModalTopView.swift */,
+				EC0346A9281C2FDD00BF669D /* Modal */,
+				EC0346AA281C2FF900BF669D /* Main */,
+				EC0346B3281C494400BF669D /* Log */,
+				EC0346B4281C497700BF669D /* writingEditView.swift */,
+				EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */,
+				EC0346BA281D124400BF669D /* TagView.swift */,
+				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
 				EC37E8AE281AF75500DC61B1 /* OvalView.swift */,
+				EC0346B1281C416300BF669D /* testShape.swift */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
 				EC37E8A2281AD73200DC61B1 /* Preview Content */,
 			);
@@ -162,15 +207,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
+				EC0346B5281C497700BF669D /* writingEditView.swift in Sources */,
 				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
 				EC37E8AF281AF75500DC61B1 /* OvalView.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,
 				EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */,
+				EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */,
+				EC0346B2281C416300BF669D /* testShape.swift in Sources */,
+				EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */,
 				EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */,
 				EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */,
 				EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */,
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
+				EC0346BF281D23E800BF669D /* GeometryReaderBootcamp.swift in Sources */,
+				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
+				EC0346BB281D124400BF669D /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
