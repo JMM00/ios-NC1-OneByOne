@@ -13,7 +13,6 @@
 		EC0346B2281C416300BF669D /* testShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B1281C416300BF669D /* testShape.swift */; };
 		EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B6281C499A00BF669D /* LogDetailView.swift */; };
 		EC0346BB281D124400BF669D /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BA281D124400BF669D /* TagView.swift */; };
-		EC0346BF281D23E800BF669D /* GeometryReaderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */; };
 		EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89C281AD73100DC61B1 /* obo_1App.swift */; };
 		EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89E281AD73100DC61B1 /* ContentView.swift */; };
 		EC37E8A1281AD73200DC61B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37E8A0281AD73200DC61B1 /* Assets.xcassets */; };
@@ -27,7 +26,9 @@
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
 		ECA093AF28201EE100E4003E /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093AE28201EE100E4003E /* FlexibleView.swift */; };
 		ECA093B12820267D00E4003E /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B02820267D00E4003E /* SizeReader.swift */; };
-		ECD67306281FF10C00B1158C /* writingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD67305281FF10C00B1158C /* writingView.swift */; };
+		ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B328202E2600E4003E /* SentenceModel.swift */; };
+		ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B528203AC900E4003E /* _FlexibleView.swift */; };
+		ECD67306281FF10C00B1158C /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD67305281FF10C00B1158C /* WritingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,6 @@
 		EC0346B1281C416300BF669D /* testShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testShape.swift; sourceTree = "<group>"; };
 		EC0346B6281C499A00BF669D /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
 		EC0346BA281D124400BF669D /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderBootcamp.swift; sourceTree = "<group>"; };
 		EC37E899281AD73100DC61B1 /* obo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37E89C281AD73100DC61B1 /* obo_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = obo_1App.swift; sourceTree = "<group>"; };
 		EC37E89E281AD73100DC61B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +52,9 @@
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
 		ECA093AE28201EE100E4003E /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		ECA093B02820267D00E4003E /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
-		ECD67305281FF10C00B1158C /* writingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writingView.swift; sourceTree = "<group>"; };
+		ECA093B328202E2600E4003E /* SentenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceModel.swift; sourceTree = "<group>"; };
+		ECA093B528203AC900E4003E /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
+		ECD67305281FF10C00B1158C /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +117,15 @@
 		EC37E89B281AD73100DC61B1 /* obo_1 */ = {
 			isa = PBXGroup;
 			children = (
+				ECA093B228202E1400E4003E /* Model */,
 				EC37E89C281AD73100DC61B1 /* obo_1App.swift */,
 				EC37E89E281AD73100DC61B1 /* ContentView.swift */,
 				EC0346A9281C2FDD00BF669D /* Modal */,
 				EC0346AA281C2FF900BF669D /* Main */,
 				EC0346B3281C494400BF669D /* Log */,
-				EC0346BE281D23E800BF669D /* GeometryReaderBootcamp.swift */,
-				ECD67305281FF10C00B1158C /* writingView.swift */,
+				ECD67305281FF10C00B1158C /* WritingView.swift */,
 				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
+				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
 				ECA093B02820267D00E4003E /* SizeReader.swift */,
 				EC0346BA281D124400BF669D /* TagView.swift */,
 				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
@@ -140,6 +143,14 @@
 				EC37E8A3281AD73200DC61B1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECA093B228202E1400E4003E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECA093B328202E2600E4003E /* SentenceModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,11 +235,12 @@
 				EC0346B2281C416300BF669D /* testShape.swift in Sources */,
 				EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */,
 				EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */,
+				ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */,
 				EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */,
 				EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */,
-				ECD67306281FF10C00B1158C /* writingView.swift in Sources */,
+				ECD67306281FF10C00B1158C /* WritingView.swift in Sources */,
+				ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */,
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
-				EC0346BF281D23E800BF669D /* GeometryReaderBootcamp.swift in Sources */,
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
 				EC0346BB281D124400BF669D /* TagView.swift in Sources */,
 			);

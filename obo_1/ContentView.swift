@@ -16,9 +16,13 @@ struct ContentView: View {
                 /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/
                 
             }.tag(1)
+            WritingView().tabItem {
+                Image("to").renderingMode(.template)
+                Text("add") }.tag(2)
+            
             LogView().tabItem {
                 Image("to").renderingMode(.template)
-                /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(2)
+                /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(3)
         }
     }
 }
