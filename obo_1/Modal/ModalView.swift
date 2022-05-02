@@ -71,18 +71,16 @@ struct ModalView: View {
                         .listRowSeparator(.hidden)
      */
                 }//vstack
-                .navigationBarTitle(
-                    Text("\""),
-                    displayMode: .inline)
+                
+                .navigationBarTitle(Text("\""), displayMode: .inline)
+                
                 .navigationBarItems(trailing: Button(action: {
                                     print("Dismissing sheet view...")
-                                    self.showSheetView = false
-                                }) {
+                                    self.showSheetView = false }) {
                                     Text("Done").bold()
                                 })
-            })
-        } //scrollview
-        
+            })//scrollview
+        }
     }
 }
 

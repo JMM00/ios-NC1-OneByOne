@@ -9,29 +9,31 @@ import SwiftUI
 
 struct LogView: View {
     var body: some View {
-        VStack (spacing:0) {
-            Text("I just wanted to take another look at you.")
-                .frame(width: 350, height: 60, alignment: .leading)
-                .font(.system(size: 22, weight: .bold))
-            HStack{
-                LogBulletView()
-                LogRawView()
-            }.padding(.horizontal)
-            HStack{
-                LogBulletView()
-                LogRawView()
-            }
-            HStack{
-                LogBulletView()
-                LogRawView()
-            }
-            HStack{
-                LogBulletView()
-                LogRawView()
-            }
-            HStack{
-                LogBulletView()
-                LogRawView()
+        NavigationView {
+            VStack (spacing:0) {
+                Text("I just wanted to take another look at you.")
+                    .frame(width: 350, height: 60, alignment: .leading)
+                    .font(.system(size: 22, weight: .bold))
+                HStack{
+                    LogBulletView()
+                    LogRawView()
+                }
+                HStack{
+                    LogBulletView()
+                    LogRawView()
+                }
+                HStack{
+                    LogBulletView()
+                    LogRawView()
+                }
+                HStack{
+                    LogBulletView()
+                    LogRawView()
+                }
+                HStack{
+                    LogBulletView()
+                    LogRawView()
+                }
             }
         }
         

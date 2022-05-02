@@ -19,6 +19,7 @@ struct mainSentenceView: View {
             Text(sentenceArr[0])
                 .font(.system(size: 30, weight: .bold))
                 .frame(width: 250, height: 200, alignment: .center)
+            
             Text(movTitleArr[0])
             Divider().frame(width: 100)
         }
