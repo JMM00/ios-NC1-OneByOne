@@ -26,12 +26,17 @@ struct ContentView: View {
                 }
             
             TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                MainView(availableWidth: $availableWidth).tabItem {
+                MainView(
+                    availableWidth: $availableWidth
+                ).tabItem {
                     Image("to").renderingMode(.template)
                     /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/
                     
                 }.tag(1)
-                WritingView(availableWidth: $availableWidth).tabItem {
+                WritingView(
+                    availableWidth: $availableWidth,
+                    coreDM: CoreDataManager()
+                ).tabItem {
                     Image("to").renderingMode(.template)
                     Text("add") }.tag(2)
                 

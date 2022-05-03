@@ -11,7 +11,6 @@
 		EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AB281C337D00BF669D /* LogRawView.swift */; };
 		EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AD281C34DC00BF669D /* LogBulletView.swift */; };
 		EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B6281C499A00BF669D /* LogDetailView.swift */; };
-		EC0346BB281D124400BF669D /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BA281D124400BF669D /* TagView.swift */; };
 		EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89C281AD73100DC61B1 /* obo_1App.swift */; };
 		EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89E281AD73100DC61B1 /* ContentView.swift */; };
 		EC37E8A1281AD73200DC61B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37E8A0281AD73200DC61B1 /* Assets.xcassets */; };
@@ -26,6 +25,9 @@
 		ECA093B12820267D00E4003E /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B02820267D00E4003E /* SizeReader.swift */; };
 		ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B328202E2600E4003E /* SentenceModel.swift */; };
 		ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093B528203AC900E4003E /* _FlexibleView.swift */; };
+		ECA093BF2821397100E4003E /* SentenceDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */; };
+		ECA093C228214CD200E4003E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093C128214CD200E4003E /* CoreDataManager.swift */; };
+		ECA093C6282179A800E4003E /* SentenceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA093C5282179A800E4003E /* SentenceDetail.swift */; };
 		ECD67306281FF10C00B1158C /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD67305281FF10C00B1158C /* WritingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +36,6 @@
 		EC0346AB281C337D00BF669D /* LogRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRawView.swift; sourceTree = "<group>"; };
 		EC0346AD281C34DC00BF669D /* LogBulletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBulletView.swift; sourceTree = "<group>"; };
 		EC0346B6281C499A00BF669D /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
-		EC0346BA281D124400BF669D /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		EC37E899281AD73100DC61B1 /* obo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37E89C281AD73100DC61B1 /* obo_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = obo_1App.swift; sourceTree = "<group>"; };
 		EC37E89E281AD73100DC61B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +51,9 @@
 		ECA093B02820267D00E4003E /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
 		ECA093B328202E2600E4003E /* SentenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceModel.swift; sourceTree = "<group>"; };
 		ECA093B528203AC900E4003E /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
+		ECA093BE2821397100E4003E /* SentenceDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SentenceDataModel.xcdatamodel; sourceTree = "<group>"; };
+		ECA093C128214CD200E4003E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ECA093C5282179A800E4003E /* SentenceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceDetail.swift; sourceTree = "<group>"; };
 		ECD67305281FF10C00B1158C /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,8 @@
 		EC37E890281AD73100DC61B1 = {
 			isa = PBXGroup;
 			children = (
+				ECA093C028214CB000E4003E /* Manager */,
+				ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */,
 				EC37E89B281AD73100DC61B1 /* obo_1 */,
 				EC37E89A281AD73100DC61B1 /* Products */,
 			);
@@ -121,7 +127,6 @@
 				EC0346B3281C494400BF669D /* Log */,
 				ECA093BC2821160A00E4003E /* WritingView */,
 				ECA093BB282115C300E4003E /* Extension */,
-				EC0346BA281D124400BF669D /* TagView.swift */,
 				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
 				EC37E8A2281AD73200DC61B1 /* Preview Content */,
@@ -157,10 +162,19 @@
 			isa = PBXGroup;
 			children = (
 				ECD67305281FF10C00B1158C /* WritingView.swift */,
+				ECA093C5282179A800E4003E /* SentenceDetail.swift */,
 				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
 				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
 			);
 			path = WritingView;
+			sourceTree = "<group>";
+		};
+		ECA093C028214CB000E4003E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ECA093C128214CD200E4003E /* CoreDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +264,9 @@
 				ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */,
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
-				EC0346BB281D124400BF669D /* TagView.swift in Sources */,
+				ECA093BF2821397100E4003E /* SentenceDataModel.xcdatamodeld in Sources */,
+				ECA093C228214CD200E4003E /* CoreDataManager.swift in Sources */,
+				ECA093C6282179A800E4003E /* SentenceDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +465,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECA093BE2821397100E4003E /* SentenceDataModel.xcdatamodel */,
+			);
+			currentVersion = ECA093BE2821397100E4003E /* SentenceDataModel.xcdatamodel */;
+			path = SentenceDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC37E891281AD73100DC61B1 /* Project object */;
 }
