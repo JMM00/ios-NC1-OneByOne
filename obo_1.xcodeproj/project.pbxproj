@@ -10,7 +10,6 @@
 		EC0346A8281C177000BF669D /* ModalExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346A7281C177000BF669D /* ModalExView.swift */; };
 		EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AB281C337D00BF669D /* LogRawView.swift */; };
 		EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346AD281C34DC00BF669D /* LogBulletView.swift */; };
-		EC0346B2281C416300BF669D /* testShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B1281C416300BF669D /* testShape.swift */; };
 		EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346B6281C499A00BF669D /* LogDetailView.swift */; };
 		EC0346BB281D124400BF669D /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0346BA281D124400BF669D /* TagView.swift */; };
 		EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E89C281AD73100DC61B1 /* obo_1App.swift */; };
@@ -19,7 +18,6 @@
 		EC37E8A4281AD73200DC61B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37E8A3281AD73200DC61B1 /* Preview Assets.xcassets */; };
 		EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AA281AE04400DC61B1 /* MainView.swift */; };
 		EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AC281AE81C00DC61B1 /* LogView.swift */; };
-		EC37E8AF281AF75500DC61B1 /* OvalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AE281AF75500DC61B1 /* OvalView.swift */; };
 		EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
@@ -35,7 +33,6 @@
 		EC0346A7281C177000BF669D /* ModalExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExView.swift; sourceTree = "<group>"; };
 		EC0346AB281C337D00BF669D /* LogRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRawView.swift; sourceTree = "<group>"; };
 		EC0346AD281C34DC00BF669D /* LogBulletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBulletView.swift; sourceTree = "<group>"; };
-		EC0346B1281C416300BF669D /* testShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testShape.swift; sourceTree = "<group>"; };
 		EC0346B6281C499A00BF669D /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
 		EC0346BA281D124400BF669D /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		EC37E899281AD73100DC61B1 /* obo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +42,6 @@
 		EC37E8A3281AD73200DC61B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC37E8AA281AE04400DC61B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EC37E8AC281AE81C00DC61B1 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
-		EC37E8AE281AF75500DC61B1 /* OvalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalView.swift; sourceTree = "<group>"; };
 		EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainSentenceView.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
@@ -123,14 +119,10 @@
 				EC0346A9281C2FDD00BF669D /* Modal */,
 				EC0346AA281C2FF900BF669D /* Main */,
 				EC0346B3281C494400BF669D /* Log */,
-				ECD67305281FF10C00B1158C /* WritingView.swift */,
-				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
-				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
-				ECA093B02820267D00E4003E /* SizeReader.swift */,
+				ECA093BC2821160A00E4003E /* WritingView */,
+				ECA093BB282115C300E4003E /* Extension */,
 				EC0346BA281D124400BF669D /* TagView.swift */,
 				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
-				EC37E8AE281AF75500DC61B1 /* OvalView.swift */,
-				EC0346B1281C416300BF669D /* testShape.swift */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
 				EC37E8A2281AD73200DC61B1 /* Preview Content */,
 			);
@@ -151,6 +143,24 @@
 				ECA093B328202E2600E4003E /* SentenceModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECA093BB282115C300E4003E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECA093B02820267D00E4003E /* SizeReader.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ECA093BC2821160A00E4003E /* WritingView */ = {
+			isa = PBXGroup;
+			children = (
+				ECD67305281FF10C00B1158C /* WritingView.swift */,
+				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
+				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
+			);
+			path = WritingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,13 +236,11 @@
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
 				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
-				EC37E8AF281AF75500DC61B1 /* OvalView.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,
 				ECA093AF28201EE100E4003E /* FlexibleView.swift in Sources */,
 				EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */,
 				EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */,
 				ECA093B12820267D00E4003E /* SizeReader.swift in Sources */,
-				EC0346B2281C416300BF669D /* testShape.swift in Sources */,
 				EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */,
 				EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */,
 				ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */,

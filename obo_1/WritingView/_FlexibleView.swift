@@ -15,16 +15,6 @@ struct _FlexibleView<Data: Collection, Content: View>: View where Data.Element: 
     @State private var elementsSize: [Data.Element: CGSize] = [:]
     
     var body: some View {
-        /*
-         ZStack{
-         ForEach(data, id: \.self) { element in
-         content(element)
-         .fixedSize()
-         .readSize { size in
-         elementsSize[element] = size
-         }
-         }
-         */
         VStack(alignment: .leading, spacing: spacing) {
             ForEach (computeRows(), id: \.self) { rowElements in
                 HStack(spacing: spacing) {

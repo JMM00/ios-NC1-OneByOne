@@ -20,7 +20,7 @@ struct LogBulletView: View {
             Circle().foregroundColor(Color.black)
                 .frame(width: 10, height: 10)
         }
-        .frame(width: .infinity, height: 60)
+        .frame(height: 60)
     }
 }
 

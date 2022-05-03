@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct LogDetailView: View {
+    @Binding var availablewidth: CGFloat
     var body: some View {
         VStack (alignment: .leading) {
-            Text("I just wanted to take another look at you.")
-                .font(.system(size: 20, weight: .bold))
-                .frame(width: .infinity, height: 70, alignment: .center)
-            Text("그냥 다시 한번 널 보고 싶었어.")
-                .font(.system(size: 15, weight: .medium))
-                .frame(width: .infinity, height: 20, alignment: .leading)
+            ModalTopView(availablewidth: $availablewidth)
             Divider().padding(.bottom)
             
             LogRawView()
@@ -29,6 +25,6 @@ struct LogDetailView: View {
 
 struct LogDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LogDetailView()
+        LogDetailView(availablewidth: .constant(350))
     }
 }

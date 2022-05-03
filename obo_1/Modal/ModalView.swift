@@ -9,69 +9,47 @@ import SwiftUI
 
 struct ModalView: View {
     @Binding var showSheetView: Bool
+    @Binding var avaliableWidth: CGFloat
+    @EnvironmentObject var sizeModel : ScreenSize
+    
     var body: some View {
+        let width: CGFloat = avaliableWidth
+        
         NavigationView {
             ScrollView (.vertical, showsIndicators: false, content:  {
-                VStack {
-                    ModalTopView()
-                    Divider().frame(width: 350)
+                VStack{
+                    ModalTopView(availablewidth: $avaliableWidth)
+                    Divider()
                     
                     Text("오늘의 단어")
-                        .font(.system(size: 20, weight: .medium))
-                        .frame(width: 335, height: 24, alignment: .leading)
+                        .font(.title3).bold()
+//                        .frame(width: avaliableWidth, height: 24, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.gray)
-                        .padding()
-                    ModalWordView()
-                    ModalWordView()
-                    
-                    Divider().frame(width: 350)
+                        .padding(.vertical)
+                    ModalWordView(avaliableWidth: $avaliableWidth)
+                    ModalWordView(avaliableWidth: $avaliableWidth)
+                    Divider().padding(.vertical)
                     
                     Text("오늘의 핵심 표현")
-                        .font(.system(size: 20, weight: .medium))
-                        .frame(width: 335, height: 24, alignment: .leading)
+//                        .font(.system(size: 20, weight: .medium))
+                        .font(.title3).bold()
+//                        .frame(width: width, height: 24, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.gray)
-                        .padding()
+                        .padding(.bottom)
                     Text("take another look at -")
-                        .font(.system(size: 20, weight: .regular))
-                        .frame(width: 330, height: 24, alignment: .leading)
+//                        .font(.system(size: 20, weight: .regular))
+                        .font(.body).bold()
+//                        .frame(width: width, height: 24, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.black)
                         .padding(.bottom)
                     ForEach(1..<4) { number in
-                        ModalExView()
+                        ModalExView(avaliableWidth: $avaliableWidth)
                     }
-                    
-    /*
-                    Text("I have to take another look at book.")
-                        .font(.system(size: 18, weight: .regular))
-                        .frame(width: 330, height: 24, alignment: .leading)
-                        .foregroundColor(Color.gray)
-                    Text("I wanted to take another look at this view.")
-                        .font(.system(size: 18, weight: .regular))
-                        .frame(width: 330, height: 24, alignment: .leading)
-                        .foregroundColor(Color.gray)
-    */
-    /*
-                    Text("I hope taking another look at our family in our house where in my ground")
-                        .font(.system(size: 18, weight: .regular))
-                        .frame(width: 330, height: 24, alignment: .leading)
-                        .foregroundColor(Color.gray)
-    */
-                    
-    /*
-                    List{
-                        Text("take another look at -")
-                            .font(.system(size: 20, weight: .regular))
-                            .frame(width: 330, height: 24, alignment: .leading)
-                            .foregroundColor(.black)
-                        Text("I have to take another look at book.")
-                            .font(.system(size: 18, weight: .regular))
-                            .frame(width: 335, height: 24, alignment: .leading)
-                            .foregroundColor(Color.gray)
-                    }.listStyle(InsetListStyle())
-                        .listRowSeparator(.hidden)
-     */
                 }//vstack
-                
+                .frame(width: width)
                 .navigationBarTitle(Text("\""), displayMode: .inline)
                 
                 .navigationBarItems(trailing: Button(action: {
@@ -86,6 +64,6 @@ struct ModalView: View {
 
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-        ModalView(showSheetView: .constant(true))
+        ModalView(showSheetView: .constant(true), avaliableWidth: .constant(350))
     }
 }

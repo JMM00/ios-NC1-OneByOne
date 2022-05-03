@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//사용 안함 사이즈는 content에서 측정
 struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: Hashable {
     let data: Data
     let spacing: CGFloat
@@ -16,7 +16,7 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
             Color.clear
-                .frame(height: 1)
+                .frame(maxWidth: .infinity, maxHeight: 1)
                 .readSize { size in
                     availableWidth = size.width
                     print("______________",size.width)
