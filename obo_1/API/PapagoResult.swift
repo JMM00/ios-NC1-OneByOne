@@ -6,7 +6,7 @@
 //
 
 import Foundation
-/*
+
 struct Welcome: Codable {
     let message: Message
 }
@@ -24,6 +24,7 @@ struct Message: Codable{
 }
 
 struct Result: Codable {
-    let translatedText, srcLangText: String
+    //    let srcLangText, tarLangType, translatedText: String
+        let translatedText: String
 }
-*/
+

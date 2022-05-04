@@ -18,14 +18,13 @@
 		EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AA281AE04400DC61B1 /* MainView.swift */; };
 		EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AC281AE81C00DC61B1 /* LogView.swift */; };
 		EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */; };
-		EC4F7C3C2821A00100C72A61 /* CoreDataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */; };
-		EC4F7C3F2821A17E00C72A61 /* SentencesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */; };
-		EC4F7C622821BB1F00C72A61 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */; };
 		EC4F7C642821BC6D00C72A61 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C632821BC6D00C72A61 /* Persistence.swift */; };
 		EC4F7C682822472000C72A61 /* SentenceData.json in Resources */ = {isa = PBXBuildFile; fileRef = EC4F7C672822472000C72A61 /* SentenceData.json */; };
 		EC4F7C6A2822496400C72A61 /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C692822496400C72A61 /* Dialogue.swift */; };
 		EC4F7C6D2822961200C72A61 /* PapagoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C6C2822961200C72A61 /* PapagoTest.swift */; };
 		EC560F902822B30A00F47E5E /* PapagoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F8F2822B30A00F47E5E /* PapagoResult.swift */; };
+		EC560F942822CA2100F47E5E /* WordInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F932822CA2100F47E5E /* WordInfoModel.swift */; };
+		EC560F962822CF8C00F47E5E /* DownloadWithEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
@@ -52,14 +51,13 @@
 		EC37E8AA281AE04400DC61B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EC37E8AC281AE81C00DC61B1 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainSentenceView.swift; sourceTree = "<group>"; };
-		EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBootcamp.swift; sourceTree = "<group>"; };
-		EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SentencesContainer.xcdatamodel; sourceTree = "<group>"; };
-		EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		EC4F7C632821BC6D00C72A61 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EC4F7C672822472000C72A61 /* SentenceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SentenceData.json; sourceTree = "<group>"; };
 		EC4F7C692822496400C72A61 /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
 		EC4F7C6C2822961200C72A61 /* PapagoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoTest.swift; sourceTree = "<group>"; };
 		EC560F8F2822B30A00F47E5E /* PapagoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoResult.swift; sourceTree = "<group>"; };
+		EC560F932822CA2100F47E5E /* WordInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoModel.swift; sourceTree = "<group>"; };
+		EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadWithEscaping.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
@@ -163,10 +161,7 @@
 		EC4F7C652821BF8B00C72A61 /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */,
-				EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */,
 				EC4F7C632821BC6D00C72A61 /* Persistence.swift */,
-				EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -175,7 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				EC4F7C6C2822961200C72A61 /* PapagoTest.swift */,
+				EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */,
 				EC560F8F2822B30A00F47E5E /* PapagoResult.swift */,
+				EC560F932822CA2100F47E5E /* WordInfoModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 			files = (
 				EC560F902822B30A00F47E5E /* PapagoResult.swift in Sources */,
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
-				EC4F7C622821BB1F00C72A61 /* CoreDataViewModel.swift in Sources */,
 				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,
@@ -305,16 +301,16 @@
 				EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */,
 				EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */,
 				ECD67306281FF10C00B1158C /* WritingView.swift in Sources */,
+				EC560F942822CA2100F47E5E /* WordInfoModel.swift in Sources */,
 				ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */,
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
 				EC4F7C6D2822961200C72A61 /* PapagoTest.swift in Sources */,
 				ECA093BF2821397100E4003E /* SentenceDataModel.xcdatamodeld in Sources */,
 				ECA093C228214CD200E4003E /* CoreDataManager.swift in Sources */,
-				EC4F7C3C2821A00100C72A61 /* CoreDataBootcamp.swift in Sources */,
 				EC4F7C6A2822496400C72A61 /* Dialogue.swift in Sources */,
-				EC4F7C3F2821A17E00C72A61 /* SentencesContainer.xcdatamodeld in Sources */,
 				ECA093C6282179A800E4003E /* SentenceDetail.swift in Sources */,
+				EC560F962822CF8C00F47E5E /* DownloadWithEscaping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,16 +511,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */,
-			);
-			currentVersion = EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */;
-			path = SentencesContainer.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

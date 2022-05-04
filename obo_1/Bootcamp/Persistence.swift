@@ -14,8 +14,8 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for x in 0..<10 {
-            let newSentenceModified = SentenceEntity(context: viewContext)
-            newSentenceModified.sentenceModified = "how i met your mother. \(x)"
+            let newSentenceModified = Sentence(context: viewContext)
+            newSentenceModified.modifiedSentence = "how i met your mother. \(x)"
         }
         do {
             try viewContext.save()
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "SentencesContainer")
+        container = NSPersistentContainer(name: "SentenceDataModel")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

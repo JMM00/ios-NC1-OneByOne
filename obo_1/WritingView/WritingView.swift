@@ -25,12 +25,16 @@ struct WritingView: View {
     @State private var sentenceModified: String = ""
     @State private var sentences: [Sentence] = [Sentence] ()
     
+    //list출력 요소
+    @State private var result = ""
+    
     private func populateSentences() {
-        listHeight = CGFloat(sentences.count * 53)
+        listHeight = CGFloat(sentences.count * 53 * 2)
         sentences = coreDM.getAllSentences()
     }
     
-     
+    @ObservedObject var viewModel = ViewModel()
+    @State private var testText = "This is the story of how i die."
     
     var body: some View {
         NavigationView {
@@ -48,9 +52,19 @@ struct WritingView: View {
                             TextField("i just wanted to take another look at you.", text: $sentenceModified)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                             Button{
-                                coreDM.saveSentence(modifiedSentence: sentenceModified)
+                                testText = sentenceModified
+                                viewModel.requestAPI(sentence: testText) //왜 여기서 바로 결과가 나오지 않지?
+                                
+                                coreDM.saveSentence(
+                                    modifiedSentence: sentenceModified,
+                                    meanSentence: viewModel.text
+//                                        viewModel.requestAPI(sentence: testText)
+//                                        viewModel.text
+                                )
                                 populateSentences()
+                                
                                 sentenceModified = ""
+                                testText = ""
                             } label: {
                                  Image(systemName: "plus")
                             }
@@ -67,21 +81,9 @@ struct WritingView: View {
                         
                         VStack {
                             List{
-                                /*
-                                ForEach(sentences, id: \.self) { sentence in
-                                    NavigationLink(
-                                        destination: SentenceDetail(
-                                            sentence: sentence,
-                                            coreDM: coreDM,
-                                            needRefresh: $needRefresh
-                                        ),
-                                        label: {
-                                        Text(sentence.modifiedSentence ?? "")
-                                        }
-                                    )
-                                 */
                                 ForEach(sentences, id: \.self) { sentence in
                                     Text(sentence.modifiedSentence ?? "")
+                                    Text(sentence.meanSentence ?? "")
                                 }.onDelete(perform: { indexSet in
                                     indexSet.forEach { index in
                                         let sentence = sentences[index]

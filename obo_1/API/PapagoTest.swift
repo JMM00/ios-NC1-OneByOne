@@ -6,41 +6,19 @@
 //
 
 import SwiftUI
-
-
-struct Welcome: Codable {
-    let message: Message
-}
-
-struct Message: Codable{
-    let type, service, version: String
-    let result: Result
-    
-    enum CodingKeys: String, CodingKey {
-        case type = "@type"
-        case service = "@service"
-        case version = "@version"
-        case result
-    }
-}
-
-struct Result: Codable {
-//    let srcLangText, tarLangType, translatedText: String
-    let translatedText: String
-}
-
-
+/*
 struct Model: Decodable {
     let id: UUID
     let dialogue: String
     let title: String
     let source: String
 }
+ */
 class ViewModel: ObservableObject {
     @Published var items: String = ""
     @Published var text: String = ""
     
-    func requestAPI (sentence: String) {
+    func requestAPI (sentence: String){
         
         let text = sentence
         let param = "source=en&target=ko&text=\(text)"
@@ -79,7 +57,6 @@ class ViewModel: ObservableObject {
                         DispatchQueue.main.async {
                             self.items = str
                             self.text = decodedResult.message.result.translatedText
-                            print(self.text, decodedResult.message.result.translatedText)
                         }
                     }
                     catch let DecodingError.dataCorrupted(context) {
@@ -111,6 +88,8 @@ class ViewModel: ObservableObject {
             }
         }
         task.resume()
+        print(self.text,"____self.text")
+//        return self.text
     }
 }
 struct PapagoTestView: View {
@@ -124,7 +103,7 @@ struct PapagoTestView: View {
                 Divider()
                 Text(viewModel.text)
             }.onAppear(perform: {
-                viewModel.requestAPI(sentence: testText)
+                let _ = viewModel.requestAPI(sentence: testText)
             })
             .navigationBarTitle("Datas")
         }

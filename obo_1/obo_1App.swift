@@ -13,8 +13,9 @@ struct obo_1App: App {
     
     var body: some Scene {
         WindowGroup {
-            PapagoTestView()
-//            ContentView(dialogues: DialogueData.sampleData)
+//            DownloadWithEscaping()
+//            PapagoTestView()
+            ContentView(dialogues: DialogueData.sampleData)
 //            CoreDataBootcamp()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

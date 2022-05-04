@@ -47,9 +47,11 @@ class CoreDataManager {
         }
     }
     
-    func saveSentence(modifiedSentence: String) {
+    func saveSentence(modifiedSentence: String, meanSentence: String) {
         let sentence = Sentence(context: persistentcontainer.viewContext)
+        print(modifiedSentence, meanSentence, "_______________saveSentence")
         sentence.modifiedSentence = modifiedSentence
+        sentence.meanSentence = meanSentence
         
         do {
             try persistentcontainer.viewContext.save()
