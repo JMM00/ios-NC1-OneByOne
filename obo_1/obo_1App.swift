@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct obo_1App: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(dialogues: DialogueData.sampleData)
+//            CoreDataBootcamp()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

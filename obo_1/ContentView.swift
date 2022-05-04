@@ -15,43 +15,56 @@ struct ContentView: View {
     @StateObject var sizeModel: ScreenSize = ScreenSize()
     @State private var availableWidth: CGFloat = 0
     
+    //Json
+//    @ObservedObject var dialogueDatas = ReadData()
+    let dialogueIndex  = Int.random(in: 0..<3)
+    
+    //sample data
+    let dialogues: [DialogueData]
+    let index: Int = 1
+    
+    
     var body: some View {
         
+        //화면 사이즈 계산
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
             Color.clear
                 .frame(maxWidth: .infinity, maxHeight: 1)
                 .readSize { size in
-                    sizeModel.width = size.width - 70
-                    availableWidth = size.width - 70
+                    sizeModel.width = size.width - 80
+                    availableWidth = size.width - 80
                 }
             
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            //tab view
+            TabView{
                 MainView(
-                    availableWidth: $availableWidth
+                    availableWidth: $availableWidth,
+                    dialogue: dialogues[index]
                 ).tabItem {
-                    Image("to").renderingMode(.template)
-                    /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/
+                    Image(systemName: "house.fill")
+                    Text("Main")
                     
                 }.tag(1)
                 WritingView(
                     availableWidth: $availableWidth,
+                    dialogue: dialogues[index],
                     coreDM: CoreDataManager()
                 ).tabItem {
-                    Image("to").renderingMode(.template)
-                    Text("add") }.tag(2)
+                    Image(systemName: "plus.circle.fill")
+                    Text("Add") }.tag(2)
                 
                 LogView().tabItem {
-                    Image("to").renderingMode(.template)
-                    /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(3)
+                    Image(systemName: "camera.macro")
+                    Text("Log") }.tag(3)
             }
         }
-        .environmentObject(sizeModel)
+//        .environmentObject(sizeModel)
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(dialogues: DialogueData.sampleData)
     }
 }

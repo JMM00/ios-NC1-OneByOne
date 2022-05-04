@@ -18,6 +18,12 @@
 		EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AA281AE04400DC61B1 /* MainView.swift */; };
 		EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8AC281AE81C00DC61B1 /* LogView.swift */; };
 		EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */; };
+		EC4F7C3C2821A00100C72A61 /* CoreDataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */; };
+		EC4F7C3F2821A17E00C72A61 /* SentencesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */; };
+		EC4F7C622821BB1F00C72A61 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */; };
+		EC4F7C642821BC6D00C72A61 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C632821BC6D00C72A61 /* Persistence.swift */; };
+		EC4F7C682822472000C72A61 /* SentenceData.json in Resources */ = {isa = PBXBuildFile; fileRef = EC4F7C672822472000C72A61 /* SentenceData.json */; };
+		EC4F7C6A2822496400C72A61 /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7C692822496400C72A61 /* Dialogue.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
@@ -44,6 +50,12 @@
 		EC37E8AA281AE04400DC61B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EC37E8AC281AE81C00DC61B1 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		EC37E8B2281AFA2E00DC61B1 /* mainSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainSentenceView.swift; sourceTree = "<group>"; };
+		EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBootcamp.swift; sourceTree = "<group>"; };
+		EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SentencesContainer.xcdatamodel; sourceTree = "<group>"; };
+		EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		EC4F7C632821BC6D00C72A61 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EC4F7C672822472000C72A61 /* SentenceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SentenceData.json; sourceTree = "<group>"; };
+		EC4F7C692822496400C72A61 /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
@@ -101,8 +113,6 @@
 		EC37E890281AD73100DC61B1 = {
 			isa = PBXGroup;
 			children = (
-				ECA093C028214CB000E4003E /* Manager */,
-				ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */,
 				EC37E89B281AD73100DC61B1 /* obo_1 */,
 				EC37E89A281AD73100DC61B1 /* Products */,
 			);
@@ -119,9 +129,11 @@
 		EC37E89B281AD73100DC61B1 /* obo_1 */ = {
 			isa = PBXGroup;
 			children = (
-				ECA093B228202E1400E4003E /* Model */,
 				EC37E89C281AD73100DC61B1 /* obo_1App.swift */,
 				EC37E89E281AD73100DC61B1 /* ContentView.swift */,
+				EC4F7C652821BF8B00C72A61 /* Bootcamp */,
+				ECA093C028214CB000E4003E /* Manager */,
+				ECA093B228202E1400E4003E /* Model */,
 				EC0346A9281C2FDD00BF669D /* Modal */,
 				EC0346AA281C2FF900BF669D /* Main */,
 				EC0346B3281C494400BF669D /* Log */,
@@ -129,6 +141,7 @@
 				ECA093BB282115C300E4003E /* Extension */,
 				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
+				EC4F7C672822472000C72A61 /* SentenceData.json */,
 				EC37E8A2281AD73200DC61B1 /* Preview Content */,
 			);
 			path = obo_1;
@@ -142,10 +155,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC4F7C652821BF8B00C72A61 /* Bootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F7C3B2821A00100C72A61 /* CoreDataBootcamp.swift */,
+				EC4F7C612821BB1F00C72A61 /* CoreDataViewModel.swift */,
+				EC4F7C632821BC6D00C72A61 /* Persistence.swift */,
+				EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */,
+			);
+			path = Bootcamp;
+			sourceTree = "<group>";
+		};
 		ECA093B228202E1400E4003E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				ECA093B328202E2600E4003E /* SentenceModel.swift */,
+				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +197,7 @@
 		ECA093C028214CB000E4003E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */,
 				ECA093C128214CD200E4003E /* CoreDataManager.swift */,
 			);
 			path = Manager;
@@ -237,6 +263,7 @@
 			files = (
 				EC37E8A4281AD73200DC61B1 /* Preview Assets.xcassets in Resources */,
 				EC37E8A1281AD73200DC61B1 /* Assets.xcassets in Resources */,
+				EC4F7C682822472000C72A61 /* SentenceData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
+				EC4F7C622821BB1F00C72A61 /* CoreDataViewModel.swift in Sources */,
 				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,
@@ -255,6 +283,7 @@
 				EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */,
 				EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */,
 				ECA093B12820267D00E4003E /* SizeReader.swift in Sources */,
+				EC4F7C642821BC6D00C72A61 /* Persistence.swift in Sources */,
 				EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */,
 				EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */,
 				ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */,
@@ -266,6 +295,9 @@
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
 				ECA093BF2821397100E4003E /* SentenceDataModel.xcdatamodeld in Sources */,
 				ECA093C228214CD200E4003E /* CoreDataManager.swift in Sources */,
+				EC4F7C3C2821A00100C72A61 /* CoreDataBootcamp.swift in Sources */,
+				EC4F7C6A2822496400C72A61 /* Dialogue.swift in Sources */,
+				EC4F7C3F2821A17E00C72A61 /* SentencesContainer.xcdatamodeld in Sources */,
 				ECA093C6282179A800E4003E /* SentenceDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +499,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		EC4F7C3D2821A17E00C72A61 /* SentencesContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */,
+			);
+			currentVersion = EC4F7C3E2821A17E00C72A61 /* SentencesContainer.xcdatamodel */;
+			path = SentencesContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		ECA093BD2821397100E4003E /* SentenceDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

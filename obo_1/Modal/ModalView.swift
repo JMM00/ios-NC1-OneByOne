@@ -12,13 +12,18 @@ struct ModalView: View {
     @Binding var avaliableWidth: CGFloat
     @EnvironmentObject var sizeModel : ScreenSize
     
+    let dialogue: DialogueData
+    
     var body: some View {
         let width: CGFloat = avaliableWidth
         
         NavigationView {
             ScrollView (.vertical, showsIndicators: false, content:  {
                 VStack{
-                    ModalTopView(availablewidth: $avaliableWidth)
+                    ModalTopView(
+                        dialogues: dialogue,
+                        availablewidth: $avaliableWidth
+                    )
                     Divider()
                     
                     Text("오늘의 단어")
@@ -64,6 +69,10 @@ struct ModalView: View {
 
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-        ModalView(showSheetView: .constant(true), avaliableWidth: .constant(350))
+        ModalView(
+            showSheetView: .constant(true),
+            avaliableWidth: .constant(350),
+            dialogue: DialogueData.sampleData[1]
+        )
     }
 }

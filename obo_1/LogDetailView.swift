@@ -9,9 +9,15 @@ import SwiftUI
 
 struct LogDetailView: View {
     @Binding var availablewidth: CGFloat
+    
+    let dialogue: DialogueData
+    
     var body: some View {
         VStack (alignment: .leading) {
-            ModalTopView(availablewidth: $availablewidth)
+            ModalTopView(
+                dialogues: dialogue,
+                availablewidth: $availablewidth
+            )
             Divider().padding(.bottom)
             
             LogRawView()
@@ -25,6 +31,9 @@ struct LogDetailView: View {
 
 struct LogDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LogDetailView(availablewidth: .constant(350))
+        LogDetailView(
+            availablewidth: .constant(350),
+            dialogue: DialogueData.sampleData[0]
+         )
     }
 }

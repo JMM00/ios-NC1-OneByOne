@@ -1,0 +1,77 @@
+[
+    {
+        "sentence" : "I just wanted to take another look at you."
+        "source" : "A star is born"
+        "mean" : "그냥 다시 한번 널 보고 싶었어"
+    },
+    {
+        "sentence" : "The greatest thing you'll ever learn is just to love and be loved in return."
+        "source" : "Moulin Rouge"
+        "mean" : "살면서 배우는 것 중 가장 위대한 것은 사랑하는 것과 사랑받는 거야"
+    },
+    {
+        "sentence" : "It's only after we've lost everything that we're free to do anything"
+        "source" : "Fight Club"
+        "mean" : "우린 모든 것을 잃은 후에야 무슨 일이든 자유롭게 할 수 있다"
+    },
+    {
+        "sentence" : "It is not our abilities that show what we truly are, it is our choices"
+        "source" : "Harry Potter"
+        "mean" : "우리가 진정 무엇인지 보여주는 것은 우리의 능력이 아니라 우리가 만드는 선택이다"
+    },
+    {
+        "sentence" : "he past can hurt, but you can either run from it, or learn from it"
+        "source" : "Lion King"
+        "mean" : "과거는 아플 수 있어, 하지만 과거로부터 도망갈 수도 있고 배울 수도 있어"
+    },
+    {
+        "sentence" : "If we didn't do what we loved, we wouldn't exist"
+        "source" : "Adonis"
+        "mean" : "만약 우리가 사랑하지 않았다면 우리는 존재도 하지 않았을 거야"
+    },
+    {
+        "sentence" : "At some point you've got to decide for yourself who you gonna be. Can't let nobody make that decision for you"
+        "source" : "Moonlight"
+        "mean" : "어떤 순간에는 네가 무엇이 되고 싶은지 너 스스로 결정해야 해. 그때는 그 누구도 널 대신해서 결정해 줄 수는 없어"
+    },
+    {
+        "sentence" : "Every man dies, not every man really lives"
+        "source" : "Braveheart"
+        "mean" : "모든 사람은 죽지만 모든 사람이 실제로 사는 것은 아니야"
+    },
+    {
+        "sentence" : "The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. And that's what you've given me. That's what I'd hoped to give you forever"
+        "source" : "The Notebook"
+        "mean" : "최고의 사랑이란 영혼을 깨우고, 더 많은 것을 위해 손을 뻗으며 마음속에 불을 심고 마음의 평화를 가져다주는 것이에요. 그것이 내가 당신에게 평생 주고 싶었던 것이에요"
+    },
+    {
+        "sentence" : "Ideals are peaceful, history is violent"
+        "source" : "Don Collier"
+        "mean" : "이상은 평화롭고 역사는 폭력적이야"
+    },
+    {
+        "sentence" : "A boy's best friend is his mother"
+        "source" : "Psycho"
+        "mean" : "남자아이의 가장 친한 친구는 그의 어머니야"
+    },
+    {
+        "sentence" : "Carpe Diem, Seize the day. Make your lives extraordinary"
+        "source" : "Dead Poets Society"
+        "mean" : "카르페 디엠, 오늘 하루를 잡아라. 삶을 특별하게 만들어라"
+    },
+    {
+        "sentence" : "There's no place like home"
+        "source" : "The Wizard of Oz"
+        "mean" : "어딜 가든 집 같은 곳은 없어"
+    },
+    {
+        "sentence" : "I don't regret the things I've done, but those I did not do"
+        "source" : "Empire Records"
+        "mean" : "내가 한 일들을 후회하진 않지만, 하지 않은 일들은 후회해"
+    },
+    {
+        "sentence" : "All we have to decide is what to do with the time that is given to us"
+        "source" : "Lord of the rings"
+        "mean" : "우리가 결정해야 하는 것은 우리에게 주어진 지간을 어떻게 사용할 것인가 그뿐이야"
+    }
+]
