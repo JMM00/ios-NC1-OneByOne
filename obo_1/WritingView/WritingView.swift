@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WritingView: View {
-    let word = ["i", "just", "wanted", "to", "take", "another", "look" ,"at" ,"you"]
+    
     @State var wordBool = [Bool] (repeating: false, count: 9)
     @StateObject var sentenceModel: SentenceModel = SentenceModel()
     @State private var test: String = ""
@@ -41,43 +41,8 @@ struct WritingView: View {
                         availablewidth: $availableWidth
                     )
                     Divider()
-                    
                     Group {
-                        Text("1단계: 문장 빈칸채우기")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Text("")
-                        
-                        _FlexibleView (
-                            availableWidth: availableWidth,
-                            data: word,
-                            spacing: 8){ item in Text(verbatim: item)
-                                    .padding(8)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .fill(Color.gray.opacity(0.2))
-                                    )
-                            }
-                        
-                        
-                        Button{
-                        } label: {
-                             Image(systemName: "plus")
-                        }
-                        .frame(width: 30, height: 30)
-                        .background(
-                            RoundedRectangle(
-                                cornerRadius: 8
-                            )
-                            .fill(
-                                Color.gray.opacity(0.2)
-                            )
-                        )
-                    }
-                    
-                    Divider()
-                    
-                    Group {
-                        Text("2단계: 나만의 문장 만들기")
+                        Text("나만의 문장 만들기")
                             .frame(maxWidth: .infinity, alignment: .leading)
                         HStack {
                             TextField("i just wanted to take another look at you.", text: $sentenceModified)

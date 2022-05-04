@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "textanalysis-349210",
+  "private_key_id": "8f4a34972bb382214926bf50d6dccc2951c91f3a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcoWYMsEW4p0Gj\nHhijyyiODdlbMuc67252+8aY7pGnV+liDxKHutkqKlx3wJq2Efc8oBFoJTKzfSqM\nTeWunQfOD/MIUP3ryEKZkv4h12y1CvGYtW7HQHFVOJcYOKzr8aIaiC+PV0byWqBB\nONnklxwPNLGddIX+YE1eN1Ioddsqy2oJYXfIVATRVygTLi4no9RToayEhk8lkRjN\nkkTrsA6xAOt/Fu8/91lJXzm5AeMhwFCP1/yP++SNbso/20KARBj7xf/V5DYVHINL\nrXxG+RX+9I0/PbsNaXU7UOBNPHZMBQ/mk5PaC1GGn/TCKuMjTufTgl/HTdk1Ikh4\niGL3fmrTAgMBAAECggEAA2W2znCmWn56PH0DIM5fx1EClWlRvaQC297TLG8ERsJv\n4/oat0n0uubnUYuib2+NUsnQBtfDtUPyP8/SuwpZ6HzNEzGaiFo0I5ueGoLPL1AY\n9Gx/BiBeNPCAynw0N/vqPbQVgADvH4OatT9z7nLen2/PqHAmFeHl27TMeecwhUmS\nfysXQ67Wo7e4Er9vF08GTQuw4/eQnzen9DQk2vk270ncN2Com/4MM5BPmcdxkSIZ\nltzxz1psnHi00odwCyAbBinVVXo0BtAQ1e+71+PBTmZYdehT/hiTHtW9x3UUOypt\nu0IxXzsfBvPDLhf2qzaFOP3FN/BzADUcvBZMOlxNYQKBgQDa0cdPlbRcFApOHCiC\nZwgZHWI/prG1i5EO4mcxwT8eBpLPPGZUuug6zgq9FR5KZulfSu2PEyzNiBAsmPlf\nNxcN1OKqC0EZ0DL/lfEP/9pj2Y3gPWBmSrObenJ7dLH84fttb7jbr4XIvICcTHJ/\ng/4HI2Ev/v8kE56qZ1eBv52PcwKBgQC3PoUZM2piUEfBqJdNyn4WJTsGRqbXO2bu\nHqgjQ0f8XwI8GAfcOde0v34O8sLZAjdAVgSwm6cGpsOvKxzaz2hESFIXg5WaVJBA\noBzPwZB6eE5MbsSWJb+gaRladG+ERAJzEQa6blPIWT41GQmQKcWtuFM227oklE1U\njc7xfPAfIQKBgQDGp/DUtcq6VY9Nfo7gZH2bn2uU8dcgRIb7Blw9dX3B2qHp9qHI\nhq9Sw8BIDSYk0e1JEBM/816XcdGNS4wJ/0+0xPLLAdCmiLfkBdKGffdc8yO00sPz\n2hnZK39HyZfVR6wlnGotN9qzdT8lptnEHqa/AEW5dz1XGWDQv2VYbAe1NQKBgA0Y\nB5S8as6po+b/sAgb/xSABo61P7jDguBjCmqypRMwis1WfkFLVNGSmWRiDnBJSz9q\nph0kkjPUeMkskHxGM9IlRNBvU6JahpBHoKdr0nId5KJri9qaye2hdPFUvp856N7m\nCZAK0CvRzLMondlSUtDOCgwyeUOh4UC4fWAeKF5hAoGACHhJ1E4tfUpZU6SUKaPw\nIdWFzuBcX++bTOjeL9cdimiUFSalmgPhPycoq/W3PAjKs0Iwp8q3Og8zrvLkJC/Y\nvOKh2t/bf0iUHYFZm1AlNOE2dFWFhljONL/y3SnZNEhy5VxEX/+Bxey7Rl+kPkzw\n6x1SJkz5HRTtkISN7IbnmVc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "textanalysisserviceaccount@textanalysis-349210.iam.gserviceaccount.com",
+  "client_id": "114806061315928397792",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/textanalysisserviceaccount%40textanalysis-349210.iam.gserviceaccount.com"
+}

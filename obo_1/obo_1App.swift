@@ -13,7 +13,8 @@ struct obo_1App: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(dialogues: DialogueData.sampleData)
+            PapagoTestView()
+//            ContentView(dialogues: DialogueData.sampleData)
 //            CoreDataBootcamp()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
