@@ -7,40 +7,39 @@
 
 import SwiftUI
 
-let getUrl = ""
-let postUrl = ""
 
+struct Welcome: Codable {
+    let message: Message
+}
+
+struct Message: Codable{
+    let type, service, version: String
+    let result: Result
+    
+    enum CodingKeys: String, CodingKey {
+        case type = "@type"
+        case service = "@service"
+        case version = "@version"
+        case result
+    }
+}
+
+struct Result: Codable {
+//    let srcLangText, tarLangType, translatedText: String
+    let translatedText: String
+}
 
 
 struct Model: Decodable {
-    let id: Int
+    let id: UUID
     let dialogue: String
     let title: String
     let source: String
 }
 class ViewModel: ObservableObject {
     @Published var items: String = ""
-    /*
-    func loadData() {
-        guard let url = URL(string: getUrl) else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, res, err) in
-            do {
-                if let data = data {
-                    let result = try JSONDecoder().decode([Model].self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        self.items = result
-                    }
-                } else {
-                    print("No data")
-                }
-            }catch (let error) {
-                print(error.localizedDescription)
-            }
-        }.resume()
-    }
-    */
+    @Published var text: String = ""
+    
     func requestAPI (sentence: String) {
         
         let text = sentence
@@ -64,11 +63,48 @@ class ViewModel: ObservableObject {
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 let str = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) ?? ""
+                
+                //확인차 출력
                 print(str)
                 
+                
+                
+                //결과 변환 코드
+                let decoder = JSONDecoder()
+                
+                if let data = str.data(using: .utf8) {
+                    do {
+                        let decodedResult = try decoder.decode(Welcome.self, from: data)
+                        print(decodedResult)
+                        DispatchQueue.main.async {
+                            self.items = str
+                            self.text = decodedResult.message.result.translatedText
+                            print(self.text, decodedResult.message.result.translatedText)
+                        }
+                    }
+                    catch let DecodingError.dataCorrupted(context) {
+                        print(context)
+                    } catch let DecodingError.keyNotFound(key, context) {
+                        print("Key '\(key)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.valueNotFound(value, context) {
+                        print("Value '\(value)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.typeMismatch(type, context)  {
+                        print("Type '\(type)' mismatch:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch {
+                        print("error: ", error)
+                    }
+                    return
+                }
+                 
+                /*
                 DispatchQueue.main.async {
                     self.items = str
                 }
+                 */
+                 
             }
             if let error = error {
                 print(error.localizedDescription)
@@ -82,17 +118,16 @@ struct PapagoTestView: View {
     @State private var testText = "This is the story of how i die."
     
     var body: some View {
-        Text("Hello")
-        
         NavigationView{
             VStack {
                 Text(viewModel.items)
+                Divider()
+                Text(viewModel.text)
             }.onAppear(perform: {
                 viewModel.requestAPI(sentence: testText)
             })
             .navigationBarTitle("Datas")
         }
-         
     }
 }
 
@@ -101,6 +136,3 @@ struct PapagoTestView_Previews: PreviewProvider{
         PapagoTestView()
     }
 }
-/*
-
-*/
