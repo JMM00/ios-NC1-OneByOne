@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct LogRawView: View {
+    
+    @Binding var availablewidth: CGFloat
+    @Binding var sentence: String
+    
     var body: some View {
-        Text("I just wanted to take another look at her.")
-            .frame(width: 330, height: 20, alignment: .leading)
+        Text(sentence)
+            .frame(maxWidth: availablewidth - 50,alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius:15).stroke(lineWidth:2)
@@ -21,6 +27,9 @@ struct LogRawView: View {
 
 struct LogRawView_Previews: PreviewProvider {
     static var previews: some View {
-        LogRawView()
+        LogRawView(
+            availablewidth: .constant(350),
+            sentence: .constant("")
+        )
     }
 }

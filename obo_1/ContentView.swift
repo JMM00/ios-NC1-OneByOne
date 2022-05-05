@@ -55,7 +55,8 @@ struct ContentView: View {
                 
                 LogView(
                     avaliableWidth: $availableWidth,
-                    dialogue: dialogues[index]
+                    dialogue: dialogues[index],
+                    coreDM: CoreDataManager()
                 ).tabItem {
                     Image(systemName: "camera.macro")
                     Text("Log") }.tag(3)

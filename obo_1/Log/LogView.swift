@@ -12,6 +12,14 @@ struct LogView: View {
     @Binding var avaliableWidth: CGFloat
     let dialogue: DialogueData
     
+    let coreDM: CoreDataManager
+    @State private var sentences: [Sentence] = [Sentence] ()
+    
+    private func populateSentences() {
+        sentences = coreDM.getAllSentences()
+//        listHeight = CGFloat((sentences.count+1) * 40 * 2)
+    }
+    
     var body: some View {
         NavigationView {
             VStack (spacing:10) {
@@ -22,11 +30,27 @@ struct LogView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top)
                 Divider()
-                HStack{
-                    LogBulletView()
-                    LogRawView()
+                    .background(Color.blackE)
+//                HStack{
+//                    LogBulletView()
+//                    LogRawView(availablewidth: $avaliableWidth)
+//                }
+//                Spacer().padding()
+                //core
+                List{
+                    ForEach(sentences, id: \.self) { sentence in
+                        HStack {
+                            LogBulletView()
+                            LogRawView(availablewidth: $avaliableWidth, sentence: .constant(sentence.modifiedSentence ?? ""))
+//                            Text(sentence.modifiedSentence ?? "")
+                        }
+                        .listRowSeparator(.hidden)
+                    }
                 }
-                Spacer().padding()
+                .listStyle(PlainListStyle())
+                .onAppear {
+                    populateSentences()
+                }
             }
             .frame(width: avaliableWidth, alignment: .center)
             .navigationBarTitleDisplayMode(.inline)
@@ -43,7 +67,8 @@ struct LogView_Previews: PreviewProvider {
     static var previews: some View {
         LogView(
             avaliableWidth: .constant(350),
-            dialogue: DialogueData.sampleData[1]
+            dialogue: DialogueData.sampleData[1],
+            coreDM: CoreDataManager()
         )
     }
 }

@@ -14,6 +14,13 @@ struct ModalView: View {
     
     let dialogue: DialogueData
     
+    @State var wordArr: [String] = []
+    
+    func getWord(dialogue: String) {
+        wordArr = dialogue.split(separator: " ").map {String($0)}
+        print(wordArr, "_____main____getWord")
+    }
+    
     var body: some View {
         let width: CGFloat = avaliableWidth
         
@@ -25,34 +32,35 @@ struct ModalView: View {
                         availablewidth: $avaliableWidth
                     )
                     Divider()
+                        .background(Color.blackE)
                     
                     Text("오늘의 단어")
-                        .font(.title3).bold()
+                        .font(.title3)//.bold()
 //                        .frame(width: avaliableWidth, height: 24, alignment: .leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.gray)
                         .padding(.vertical)
-                    ModalWordView(avaliableWidth: $avaliableWidth, dialogue: dialogue)
-                    Divider().padding(.vertical)
-                    /*
-                    Text("오늘의 핵심 표현")
-//                        .font(.system(size: 20, weight: .medium))
-                        .font(.title3).bold()
-//                        .frame(width: width, height: 24, alignment: .leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(Color.gray)
-                        .padding(.bottom)
-                    Text("take another look at -")
-//                        .font(.system(size: 20, weight: .regular))
-                        .font(.body).bold()
-//                        .frame(width: width, height: 24, alignment: .leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(.black)
-                        .padding(.bottom)
-                    ForEach(1..<4) { number in
-                        ModalExView(avaliableWidth: $avaliableWidth)
+                    ForEach (wordArr, id:\.self) { word in
+                        Text(word)
+                            .font(.body).bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        ModalWordView(
+    //                        word: .constant("how"),
+                            width: $avaliableWidth,
+                            dialogue: dialogue,
+                            vm: DictionaryModel(word: word)
+                        )
+                        Divider()
+//                            .background(Color.gray4)
                     }
-                     */
+//                    ModalWordView(
+////                        word: .constant("how"),
+//                        width: $avaliableWidth,
+//                        dialogue: dialogue,
+//                        vm: DictionaryModel(word: "hey")
+//                    )
+//                    Divider().padding(.vertical)
+
                 }//vstack
                 .frame(width: width)
                 .navigationBarTitle("", displayMode: .inline)
@@ -63,6 +71,9 @@ struct ModalView: View {
                                     Text("Done").bold()
                                 })
             })//scrollview
+        }
+        .onAppear {
+            getWord(dialogue: dialogue.dialogue)
         }
     }
 }

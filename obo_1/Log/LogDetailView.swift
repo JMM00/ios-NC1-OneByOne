@@ -20,8 +20,8 @@ struct LogDetailView: View {
             )
             Divider().padding(.bottom)
             
-            LogRawView()
-            LogRawView()
+            LogRawView(availablewidth: $availablewidth, sentence: .constant("test"))
+//            LogRawView(availablewidth: $availablewidth)
         }
         .frame(width: 350, height: 700, alignment: .top)
         

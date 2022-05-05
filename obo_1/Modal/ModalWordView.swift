@@ -14,14 +14,15 @@ class DictionaryModel: ObservableObject{
     
     @State var standardUrl: String = "https://api.dictionaryapi.dev/api/v2/entries/en/"
     @State var result = ""
+    
     @Published var wordInfo: [WordInfoElement] = []
     
-    @State var wordArray = ["The", "greatest", "thing", "you\'ll", "ever", "learn", "is", "just", "to", "love", "and", "be", "loved", "in", "return"]
+    @State var word: String = ""
     
-    init() {
-//        wordArray = 
-        getPosts(word: wordArray[5])
-        getPosts(word: wordArray[2])
+    init(word: String) {
+        getPosts(word: word)
+
+        print("dictionary model_______word")
     }
     
     func getPosts(word: String) {
@@ -71,49 +72,31 @@ class DictionaryModel: ObservableObject{
 }
 
 struct ModalWordView: View {
-    @StateObject var vm = DictionaryModel()
+//    @Binding var wordBinding: String
+    @ObservedObject var vm = DictionaryModel(word: "")
+    
     @State var result = ""
-    @State var wordArr: [String] = []
-    
-//    @EnvironmentObject var sizeModel : ScreenSize
     @Binding var avaliableWidth: CGFloat
-    
+
     let dialogue: DialogueData
     
-    func getWord(dialogue: String) {
-        wordArr = dialogue.split(separator: " ").map {String($0)}
-        print(wordArr, "_________getWord")
+    init(width: Binding<CGFloat>, dialogue: DialogueData, vm: DictionaryModel){
+        self._avaliableWidth = width
+        self.dialogue = dialogue
+        self.vm = vm
     }
     
     var body: some View {
-        /*
-        VStack {
-            Text("just")
-//                .font(.system(size: 20, weight: .medium))
-                .font(.body).bold()
-                .frame(maxWidth: .infinity, minHeight: 24, alignment: .leading)
-                .foregroundColor(Color.black)
-            DownloadWithEscaping(wordArr: wordArr)
-            Text("1. (‘정확히’라는 뜻의) 딱[꼭]    2. …하는 바로[딱] 그 순간에    3. 공정한 (=fair)   4. 공정한 사람들")
-//                .font(.system(size: 16, weight: .medium))
-                .font(.body)
-                .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-                .foregroundColor(.gray)
-        }
-        .frame(width: avaliableWidth)
-         */
-//        let _ = getWord(dialogue: dialogue.dialogue)
         VStack{
-//            ForEach(vm.getPosts(word: wordArr[0]).wordInfo)
-            ForEach(vm.wordInfo) { word in
+            
+//            Text(vm.wordInfo[0].word)
+            ForEach(vm.wordInfo) { wordInfo in
                 VStack(spacing: 10) {
-                    Text(word.word)
-                        .font(.body).bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .onAppear(perform: {
-                            getWord(dialogue: dialogue.dialogue)
-                        })
-                    ForEach(word.meanings) { meaning in
+                    let _ = print("foreach modawordview")
+//                    Text(wordInfo.word)
+//                        .font(.body).bold()
+//                        .frame(maxWidth: .infinity, alignment: .leading)
+                    ForEach(wordInfo.meanings) { meaning in
                         Text("[\(meaning.partOfSpeech)] : \(meaning.definitions[0].definition)")
 //                        Text(meaning.definitions[0].definition)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -156,8 +139,9 @@ struct ModalWordView: View {
 struct ModalWordView_Previews: PreviewProvider {
     static var previews: some View {
         ModalWordView(
-            avaliableWidth: .constant(350),
-            dialogue: DialogueData.sampleData[1]
+//            word: .constant("how"),
+            width: .constant(350),
+            dialogue: DialogueData.sampleData[1], vm: DictionaryModel(word: "how")
         )
     }
 }

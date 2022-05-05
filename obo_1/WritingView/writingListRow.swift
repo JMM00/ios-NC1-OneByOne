@@ -18,11 +18,12 @@ struct writingListRow: View {
     var body: some View {
         VStack (alignment: .leading) {
             Text(sentence.modifiedSentence ?? "")
-                .frame(maxWidth: availableWidth)
+                .frame(maxWidth: availableWidth, alignment: .leading)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
             
             Text(sentence.meanSentence ?? "")
+                .frame(maxWidth: availableWidth, alignment: .leading)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(Color.gray)

@@ -48,7 +48,7 @@ struct WritingView: View {
                         dialogues: dialogue,
                         availablewidth: $availableWidth
                     )
-                    Divider().foregroundColor(Color.blueE)
+                    Divider().foregroundColor(Color.blackE)
                     Group {
                         Text("나만의 문장 만들기")
                             .frame(maxWidth: .infinity, alignment: .leading)

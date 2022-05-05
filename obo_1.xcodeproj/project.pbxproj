@@ -116,6 +116,7 @@
 				EC37E8AC281AE81C00DC61B1 /* LogView.swift */,
 				EC0346AD281C34DC00BF669D /* LogBulletView.swift */,
 				EC0346AB281C337D00BF669D /* LogRawView.swift */,
+				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -149,7 +150,6 @@
 				EC0346B3281C494400BF669D /* Log */,
 				ECA093BC2821160A00E4003E /* WritingView */,
 				ECA093BB282115C300E4003E /* Extension */,
-				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
 				EC560F9B2824006A00F47E5E /* Color.swift */,
 				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 				EC4F7C672822472000C72A61 /* SentenceData.json */,
