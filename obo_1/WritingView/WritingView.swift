@@ -29,61 +29,86 @@ struct WritingView: View {
     @State private var result = ""
     
     private func populateSentences() {
-        listHeight = CGFloat(sentences.count * 53 * 2)
         sentences = coreDM.getAllSentences()
+        listHeight = CGFloat((sentences.count+1) * 40 * 2)
     }
     
     @ObservedObject var viewModel = ViewModel()
     @State private var testText = "This is the story of how i die."
     
+//    init() {
+//        UITableView.appearance().showsVerticalScrollIndicator = false
+//    }
+    
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView (showsIndicators: false) {
                 VStack{
                     ModalTopView(
                         dialogues: dialogue,
                         availablewidth: $availableWidth
                     )
-                    Divider()
+                    Divider().foregroundColor(Color.blueE)
                     Group {
                         Text("나만의 문장 만들기")
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        HStack {
-                            TextField("i just wanted to take another look at you.", text: $sentenceModified)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                        HStack{
+                            ZStack(alignment: .topLeading) {
+                                
+                                if sentenceModified.isEmpty {
+                                    Text("Make your own Expression")
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        .padding(.vertical, 8)
+                                        .background(Color.gray4)
+                                }
+                                TextEditor(text:$sentenceModified)
+                                    .padding(2)
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .background(sentenceModified.isEmpty ? Color.gray4 : Color.blackE)
+                            .font(.body)
                             Button{
                                 testText = sentenceModified
                                 viewModel.requestAPI(sentence: testText) //왜 여기서 바로 결과가 나오지 않지?
+                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                  // 1초 후 실행될 부분
+                                    print(testText, "______________________testTest")
+                                    print("button click__",viewModel.text)
+
+                                    coreDM.saveSentence(
+                                        modifiedSentence: sentenceModified,
+                                        meanSentence: viewModel.text
+                                    )
+                                    
+                                    let _ = print("coreDM.savesentence")
+                                    
+                                    populateSentences()
+
+                                    sentenceModified = ""
+                                    testText = ""
+                                }
                                 
-                                coreDM.saveSentence(
-                                    modifiedSentence: sentenceModified,
-                                    meanSentence: viewModel.text
-//                                        viewModel.requestAPI(sentence: testText)
-//                                        viewModel.text
-                                )
-                                populateSentences()
-                                
-                                sentenceModified = ""
-                                testText = ""
                             } label: {
-                                 Image(systemName: "plus")
-                            }
-                            .frame(width: 30, height: 30)
+                                Image(systemName: "plus")
+                            }.disabled(sentenceModified.isEmpty ? true : false)
+                            .frame(maxWidth: 30, maxHeight: .infinity)
                             .background(
                                 RoundedRectangle(
                                     cornerRadius: 8
                                 )
                                 .fill(
-                                    Color.gray.opacity(0.2)
+                                    sentenceModified.isEmpty ? Color.gray4 : Color.blackE
                                 )
-                            )
-                        }
-                        
+                            ).accentColor(Color.whiteE)
+                            
+                        }//hstack
+                        Spacer()
                         VStack {
                             List{
                                 ForEach(sentences, id: \.self) { sentence in
-                                    Text(sentence.modifiedSentence ?? "")
-                                    Text(sentence.meanSentence ?? "")
+                                    writingListRow(
+                                        availableWidth: $availableWidth,
+                                        sentence: sentence)
                                 }.onDelete(perform: { indexSet in
                                     indexSet.forEach { index in
                                         let sentence = sentences[index]
@@ -92,24 +117,22 @@ struct WritingView: View {
                                         populateSentences()
                                     }
                                 })
-                            }
-                            .onAppear {
-                                 populateSentences()
+                                
                             }
                             .listStyle(PlainListStyle())
-                            .accentColor(needRefresh ? .white : .black)
+    //                        .accentColor(needRefresh ? .white : .black)
+                            .frame(width: availableWidth, height: listHeight, alignment: .leading)
                         }
-                        .onAppear {
-                             populateSentences()
-                        }
-                        .frame(height: listHeight)
                     }
+                }//VStack
+                .onAppear{
+                    populateSentences()
                 }
                 .padding(.horizontal)
             }
             .padding(.horizontal)
-            .frame(maxWidth: availableWidth, maxHeight: .infinity)
-            Spacer()
+        .frame(maxWidth: availableWidth, maxHeight: .infinity)
+        .navigationBarTitleDisplayMode(.inline)
         }
         
     }
@@ -122,6 +145,5 @@ struct WritingView_Previews: PreviewProvider {
             dialogue: DialogueData.sampleData[1],
             coreDM: CoreDataManager()
         )
-        .previewInterfaceOrientation(.portrait)
     }
 }

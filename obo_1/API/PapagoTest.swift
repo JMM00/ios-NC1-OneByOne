@@ -45,15 +45,14 @@ class ViewModel: ObservableObject {
                 //확인차 출력
                 print(str)
                 
-                
-                
                 //결과 변환 코드
                 let decoder = JSONDecoder()
                 
                 if let data = str.data(using: .utf8) {
                     do {
                         let decodedResult = try decoder.decode(Welcome.self, from: data)
-                        print(decodedResult)
+                        print("decodedResult____________",decodedResult)
+//                        self.text = decodedResult.message.result.translatedText
                         DispatchQueue.main.async {
                             self.items = str
                             self.text = decodedResult.message.result.translatedText
@@ -75,23 +74,17 @@ class ViewModel: ObservableObject {
                     }
                     return
                 }
-                 
-                /*
-                DispatchQueue.main.async {
-                    self.items = str
-                }
-                 */
-                 
             }
             if let error = error {
                 print(error.localizedDescription)
             }
         }
         task.resume()
-        print(self.text,"____self.text")
-//        return self.text
+//        print(self.text,"requestAPI____self.text")
     }
 }
+
+/*
 struct PapagoTestView: View {
     @ObservedObject var viewModel = ViewModel()
     @State private var testText = "This is the story of how i die."
@@ -115,3 +108,4 @@ struct PapagoTestView_Previews: PreviewProvider{
         PapagoTestView()
     }
 }
+ */

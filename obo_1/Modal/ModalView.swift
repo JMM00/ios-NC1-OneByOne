@@ -32,10 +32,9 @@ struct ModalView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.gray)
                         .padding(.vertical)
-                    ModalWordView(avaliableWidth: $avaliableWidth)
-                    ModalWordView(avaliableWidth: $avaliableWidth)
+                    ModalWordView(avaliableWidth: $avaliableWidth, dialogue: dialogue)
                     Divider().padding(.vertical)
-                    
+                    /*
                     Text("오늘의 핵심 표현")
 //                        .font(.system(size: 20, weight: .medium))
                         .font(.title3).bold()
@@ -53,9 +52,10 @@ struct ModalView: View {
                     ForEach(1..<4) { number in
                         ModalExView(avaliableWidth: $avaliableWidth)
                     }
+                     */
                 }//vstack
                 .frame(width: width)
-                .navigationBarTitle(Text("\""), displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
                 
                 .navigationBarItems(trailing: Button(action: {
                                     print("Dismissing sheet view...")

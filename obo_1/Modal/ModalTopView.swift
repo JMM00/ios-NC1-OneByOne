@@ -17,6 +17,7 @@ struct ModalTopView: View {
                 .font(.title2).bold()
 //                .font(.system(size: 20, weight: .bold))
                 .frame(maxWidth: .infinity, minHeight: 70, alignment: .leading)
+                .padding(.top)
             
             Text(dialogues.mean)
 //                .font(.system(size: 15, weight: .medium))
@@ -29,9 +30,12 @@ struct ModalTopView: View {
 //                .font(.system(size: 15, weight: .medium))
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .foregroundColor(Color.gray)
-                .padding(.bottom)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
         }
         .frame(width: availablewidth)
+        .foregroundColor(Color.blueED)
+//        .padding()
+//        .background(Color.blueE)
     }
 }
 

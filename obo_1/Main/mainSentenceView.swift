@@ -22,8 +22,7 @@ struct mainSentenceView: View {
                 .frame(width: availablewidth - 50, alignment: .center)
                 .padding()
             Text(dialogue.source)
-            Divider().frame(width: availablewidth)
-        }
+        }.foregroundColor(Color.whiteE)
     }
 }
 

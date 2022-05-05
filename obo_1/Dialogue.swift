@@ -32,7 +32,7 @@ extension DialogueData {
     static let sampleData: [DialogueData] =
     [
         DialogueData(
-            dialogue: "I just wanted to take another look at you",
+            dialogue: "I just wanted to take another look at you.",
             mean: "그냥 다시 한번 널 보고 싶었어",
             source: "A star is born"),
         DialogueData(
@@ -41,8 +41,8 @@ extension DialogueData {
             source: "Moulin Rouge"),
         DialogueData(
             dialogue: "It's only after we've lost everything that we're free to do anything",
-            mean: "Fight Club",
-            source: "우린 모든 것을 잃은 후에야 무슨 일이든 자유롭게 할 수 있다")
+            mean: "우린 모든 것을 잃은 후에야 무슨 일이든 자유롭게 할 수 있다",
+            source: "Fight Club")
     ]
 }
 

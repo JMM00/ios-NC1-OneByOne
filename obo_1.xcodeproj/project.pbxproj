@@ -25,6 +25,10 @@
 		EC560F902822B30A00F47E5E /* PapagoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F8F2822B30A00F47E5E /* PapagoResult.swift */; };
 		EC560F942822CA2100F47E5E /* WordInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F932822CA2100F47E5E /* WordInfoModel.swift */; };
 		EC560F962822CF8C00F47E5E /* DownloadWithEscaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */; };
+		EC560F982823B57300F47E5E /* writingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F972823B57300F47E5E /* writingListRow.swift */; };
+		EC560F9A2823FB2100F47E5E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F992823FB2100F47E5E /* ViewExtension.swift */; };
+		EC560F9C2824006A00F47E5E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9B2824006A00F47E5E /* Color.swift */; };
+		EC560F9E282415DD00F47E5E /* viewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9D282415DD00F47E5E /* viewExtension.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
@@ -58,6 +62,10 @@
 		EC560F8F2822B30A00F47E5E /* PapagoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoResult.swift; sourceTree = "<group>"; };
 		EC560F932822CA2100F47E5E /* WordInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoModel.swift; sourceTree = "<group>"; };
 		EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadWithEscaping.swift; sourceTree = "<group>"; };
+		EC560F972823B57300F47E5E /* writingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writingListRow.swift; sourceTree = "<group>"; };
+		EC560F992823FB2100F47E5E /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = ../Manager/ViewExtension.swift; sourceTree = "<group>"; };
+		EC560F9B2824006A00F47E5E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EC560F9D282415DD00F47E5E /* viewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtension.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
@@ -142,8 +150,10 @@
 				ECA093BC2821160A00E4003E /* WritingView */,
 				ECA093BB282115C300E4003E /* Extension */,
 				EC0346B6281C499A00BF669D /* LogDetailView.swift */,
-				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
+				EC560F9B2824006A00F47E5E /* Color.swift */,
+				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 				EC4F7C672822472000C72A61 /* SentenceData.json */,
+				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
 				EC4F7C6B282295F200C72A61 /* API */,
 				EC37E8A2281AD73200DC61B1 /* Preview Content */,
 			);
@@ -170,8 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				EC4F7C6C2822961200C72A61 /* PapagoTest.swift */,
-				EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */,
 				EC560F8F2822B30A00F47E5E /* PapagoResult.swift */,
+				EC560F952822CF8C00F47E5E /* DownloadWithEscaping.swift */,
 				EC560F932822CA2100F47E5E /* WordInfoModel.swift */,
 			);
 			path = API;
@@ -181,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				ECA093B328202E2600E4003E /* SentenceModel.swift */,
-				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +198,8 @@
 		ECA093BB282115C300E4003E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EC560F992823FB2100F47E5E /* ViewExtension.swift */,
+				EC560F9D282415DD00F47E5E /* viewExtension.swift */,
 				ECA093B02820267D00E4003E /* SizeReader.swift */,
 			);
 			path = Extension;
@@ -201,6 +212,7 @@
 				ECA093C5282179A800E4003E /* SentenceDetail.swift */,
 				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
 				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
+				EC560F972823B57300F47E5E /* writingListRow.swift */,
 			);
 			path = WritingView;
 			sourceTree = "<group>";
@@ -289,17 +301,21 @@
 				EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */,
 				EC0346A8281C177000BF669D /* ModalExView.swift in Sources */,
 				EC37E89F281AD73100DC61B1 /* ContentView.swift in Sources */,
+				EC560F9E282415DD00F47E5E /* viewExtension.swift in Sources */,
 				EC37E8AD281AE81C00DC61B1 /* LogView.swift in Sources */,
 				ECA093AF28201EE100E4003E /* FlexibleView.swift in Sources */,
 				EC37E8AB281AE04400DC61B1 /* MainView.swift in Sources */,
 				EC0346AC281C337D00BF669D /* LogRawView.swift in Sources */,
+				EC560F982823B57300F47E5E /* writingListRow.swift in Sources */,
 				ECA093B12820267D00E4003E /* SizeReader.swift in Sources */,
+				EC560F9A2823FB2100F47E5E /* ViewExtension.swift in Sources */,
 				EC4F7C642821BC6D00C72A61 /* Persistence.swift in Sources */,
 				EC0346B7281C499A00BF669D /* LogDetailView.swift in Sources */,
 				EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */,
 				ECA093B428202E2600E4003E /* SentenceModel.swift in Sources */,
 				EC37E8B3281AFA2E00DC61B1 /* mainSentenceView.swift in Sources */,
 				EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */,
+				EC560F9C2824006A00F47E5E /* Color.swift in Sources */,
 				ECD67306281FF10C00B1158C /* WritingView.swift in Sources */,
 				EC560F942822CA2100F47E5E /* WordInfoModel.swift in Sources */,
 				ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */,

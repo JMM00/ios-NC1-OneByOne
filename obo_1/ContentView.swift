@@ -21,7 +21,7 @@ struct ContentView: View {
     
     //sample data
     let dialogues: [DialogueData]
-    let index: Int = 1
+    let index: Int = 2
     
     
     var body: some View {
@@ -31,8 +31,8 @@ struct ContentView: View {
             Color.clear
                 .frame(maxWidth: .infinity, maxHeight: 1)
                 .readSize { size in
-                    sizeModel.width = size.width - 80
-                    availableWidth = size.width - 80
+                    sizeModel.width = size.width - 40
+                    availableWidth = size.width - 40
                 }
             
             //tab view
@@ -53,10 +53,18 @@ struct ContentView: View {
                     Image(systemName: "plus.circle.fill")
                     Text("Add") }.tag(2)
                 
-                LogView().tabItem {
+                LogView(
+                    avaliableWidth: $availableWidth,
+                    dialogue: dialogues[index]
+                ).tabItem {
                     Image(systemName: "camera.macro")
                     Text("Log") }.tag(3)
             }
+            .accentColor(.blackE)
+        }
+        .onAppear()
+        {
+            UITabBar.appearance().backgroundColor = .white
         }
 //        .environmentObject(sizeModel)
         
