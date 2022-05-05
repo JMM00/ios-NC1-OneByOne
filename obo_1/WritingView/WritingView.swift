@@ -25,6 +25,8 @@ struct WritingView: View {
     @State private var sentenceModified: String = ""
     @State private var sentences: [Sentence] = [Sentence] ()
     
+    @State private var sentencesNow = [[String]]()
+    
     //list출력 요소
     @State private var result = ""
     
@@ -79,6 +81,7 @@ struct WritingView: View {
                                         modifiedSentence: sentenceModified,
                                         meanSentence: viewModel.text
                                     )
+                                    sentencesNow.append([sentenceModified,viewModel.text])
                                     
                                     let _ = print("coreDM.savesentence")
                                     
@@ -103,25 +106,33 @@ struct WritingView: View {
                             
                         }//hstack
                         Spacer()
+                        let _ = print(sentencesNow,"_______sentencesNow", sentencesNow.isEmpty)
                         VStack {
-                            List{
-                                ForEach(sentences, id: \.self) { sentence in
-                                    writingListRow(
-                                        availableWidth: $availableWidth,
-                                        sentence: sentence)
-                                }.onDelete(perform: { indexSet in
-                                    indexSet.forEach { index in
-                                        let sentence = sentences[index]
-                                        //delete it using core data manager
-                                        coreDM.deleteSentence(sentence: sentence)
-                                        populateSentences()
-                                    }
-                                })
-                                
+                            if !sentencesNow.isEmpty {
+                                List{
+                                    ForEach(sentencesNow, id: \.self) { sentence in
+                                        let _ = print(sentence)
+                                        writingListRow2(
+                                            availableWidth: $availableWidth,
+                                            sentence: sentence)
+                                    }.onDelete(perform: { indexSet in
+                                        indexSet.forEach { index in
+                                            
+                                            sentencesNow.remove(at: index)
+                                            //delete it using core data manager
+                                            let sentence = sentences[index]
+                                            coreDM.deleteSentence(sentence: sentence)
+                                            populateSentences()
+                                            
+                                        }
+                                    })
+                                    
+                                }
+                                .listStyle(PlainListStyle())
+        //                        .accentColor(needRefresh ? .white : .black)
+                                .frame(width: availableWidth, height: listHeight, alignment: .leading)
                             }
-                            .listStyle(PlainListStyle())
-    //                        .accentColor(needRefresh ? .white : .black)
-                            .frame(width: availableWidth, height: listHeight, alignment: .leading)
+                            
                         }
                     }
                 }//VStack

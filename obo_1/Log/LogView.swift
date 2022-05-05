@@ -23,29 +23,40 @@ struct LogView: View {
     var body: some View {
         NavigationView {
             VStack (spacing:10) {
-                Text(dialogue.dialogue)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .font(.system(size: 22, weight: .bold))
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top)
-                Divider()
-                    .background(Color.blackE)
+//                Text(dialogue.dialogue)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .font(.system(size: 22, weight: .bold))
+//                    .multilineTextAlignment(.leading)
+//                    .fixedSize(horizontal: false, vertical: true)
+//                    .padding(.top)
+//                Divider()
+//                    .background(Color.blackE)
 //                HStack{
 //                    LogBulletView()
 //                    LogRawView(availablewidth: $avaliableWidth)
 //                }
 //                Spacer().padding()
                 //core
+                Text("")
                 List{
                     ForEach(sentences, id: \.self) { sentence in
                         HStack {
                             LogBulletView()
-                            LogRawView(availablewidth: $avaliableWidth, sentence: .constant(sentence.modifiedSentence ?? ""))
+                            writingListRow(availableWidth: $avaliableWidth, sentence: sentence)
+//                            LogRawView(availablewidth: $avaliableWidth, sentence: .constant(sentence.modifiedSentence ?? ""))
 //                            Text(sentence.modifiedSentence ?? "")
                         }
                         .listRowSeparator(.hidden)
                     }
+                    .onDelete(perform: { indexSet in
+                        indexSet.forEach { index in
+                            //delete it using core data manager
+                            let sentence = sentences[index]
+                            coreDM.deleteSentence(sentence: sentence)
+                            populateSentences()
+                            
+                        }
+                    })
                 }
                 .listStyle(PlainListStyle())
                 .onAppear {

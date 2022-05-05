@@ -100,7 +100,7 @@ struct ModalWordView: View {
                         Text("[\(meaning.partOfSpeech)] : \(meaning.definitions[0].definition)")
 //                        Text(meaning.definitions[0].definition)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(Color(UIColor.systemGray2))
+                            .foregroundColor(Color.gray)
 //                        ForEach(meaning.definitions) { definition in
 //                            Text("\(definition.definition) / ")
 //                                .foregroundColor(Color(UIColor.systemGray2))

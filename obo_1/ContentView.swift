@@ -21,7 +21,7 @@ struct ContentView: View {
     
     //sample data
     let dialogues: [DialogueData]
-    let index: Int = 2
+    @State var index: Int = 2
     
     
     var body: some View {
@@ -66,6 +66,8 @@ struct ContentView: View {
         .onAppear()
         {
             UITabBar.appearance().backgroundColor = .white
+            index = Int.random(in: 0..<dialogues.count)
+            print("index___", index)
         }
 //        .environmentObject(sizeModel)
         

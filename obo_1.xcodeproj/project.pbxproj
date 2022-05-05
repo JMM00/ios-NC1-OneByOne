@@ -29,6 +29,7 @@
 		EC560F9A2823FB2100F47E5E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F992823FB2100F47E5E /* ViewExtension.swift */; };
 		EC560F9C2824006A00F47E5E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9B2824006A00F47E5E /* Color.swift */; };
 		EC560F9E282415DD00F47E5E /* viewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9D282415DD00F47E5E /* viewExtension.swift */; };
+		EC560FA02824625100F47E5E /* writingListRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9F2824625100F47E5E /* writingListRow2.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
@@ -66,6 +67,7 @@
 		EC560F992823FB2100F47E5E /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = ../Manager/ViewExtension.swift; sourceTree = "<group>"; };
 		EC560F9B2824006A00F47E5E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EC560F9D282415DD00F47E5E /* viewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtension.swift; sourceTree = "<group>"; };
+		EC560F9F2824625100F47E5E /* writingListRow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writingListRow2.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
@@ -151,7 +153,6 @@
 				ECA093BC2821160A00E4003E /* WritingView */,
 				ECA093BB282115C300E4003E /* Extension */,
 				EC560F9B2824006A00F47E5E /* Color.swift */,
-				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 				EC4F7C672822472000C72A61 /* SentenceData.json */,
 				EC37E8A0281AD73200DC61B1 /* Assets.xcassets */,
 				EC4F7C6B282295F200C72A61 /* API */,
@@ -191,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA093B328202E2600E4003E /* SentenceModel.swift */,
+				EC4F7C692822496400C72A61 /* Dialogue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 				ECA093AE28201EE100E4003E /* FlexibleView.swift */,
 				ECA093B528203AC900E4003E /* _FlexibleView.swift */,
 				EC560F972823B57300F47E5E /* writingListRow.swift */,
+				EC560F9F2824625100F47E5E /* writingListRow2.swift */,
 			);
 			path = WritingView;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				EC560F9C2824006A00F47E5E /* Color.swift in Sources */,
 				ECD67306281FF10C00B1158C /* WritingView.swift in Sources */,
 				EC560F942822CA2100F47E5E /* WordInfoModel.swift in Sources */,
+				EC560FA02824625100F47E5E /* writingListRow2.swift in Sources */,
 				ECA093B628203AC900E4003E /* _FlexibleView.swift in Sources */,
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,

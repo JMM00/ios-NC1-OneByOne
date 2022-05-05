@@ -22,18 +22,18 @@ struct ModalTopView: View {
             Text(dialogues.mean)
 //                .font(.system(size: 15, weight: .medium))
                 .font(.body)
-                .frame(maxWidth: .infinity, minHeight: 20, alignment: .trailing)
+                .frame(maxWidth: availablewidth, alignment: .trailing)
                 .padding(.vertical)
              
             Text(dialogues.source)
                 .font(.footnote)
 //                .font(.system(size: 15, weight: .medium))
-                .frame(maxWidth: .infinity, alignment: .trailing)
+                .frame(maxWidth: availablewidth, alignment: .trailing)
                 .foregroundColor(Color.gray)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
         }
         .frame(width: availablewidth)
-        .foregroundColor(Color.blueED)
+        .foregroundColor(Color.blackE)
 //        .padding()
 //        .background(Color.blueE)
     }
@@ -42,7 +42,7 @@ struct ModalTopView: View {
 struct ModalTopView_Previews: PreviewProvider {
     static var previews: some View {
         ModalTopView(
-            dialogues: DialogueData.sampleData[1],
+            dialogues: DialogueData.sampleData[7],
             availablewidth: .constant(350)
         )
     }
