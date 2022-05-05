@@ -64,10 +64,6 @@ extension DialogueData {
             mean: "모든 사람은 죽지만 모든 사람이 실제로 사는 것은 아니야",
             source: "Braveheart"),
         DialogueData(
-            dialogue: "The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. And that's what you've given me. That's what I'd hoped to give you forever",
-            mean: "최고의 사랑이란 영혼을 깨우고, 더 많은 것을 위해 손을 뻗으며 마음속에 불을 심고 마음의 평화를 가져다주는 것이에요. 그것이 내가 당신에게 평생 주고 싶었던 것이에요",
-            source: "The Notebook"),
-        DialogueData(
             dialogue: "Ideals are peaceful, history is violent",
             mean: "이상은 평화롭고 역사는 폭력적이야",
             source: "Don Collier"),

@@ -30,6 +30,7 @@
 		EC560F9C2824006A00F47E5E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9B2824006A00F47E5E /* Color.swift */; };
 		EC560F9E282415DD00F47E5E /* viewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9D282415DD00F47E5E /* viewExtension.swift */; };
 		EC560FA02824625100F47E5E /* writingListRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560F9F2824625100F47E5E /* writingListRow2.swift */; };
+		EC560FA22824749B00F47E5E /* keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560FA12824749B00F47E5E /* keyboard.swift */; };
 		EC987DE4281BB204006FAEB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE3281BB204006FAEB1 /* ModalView.swift */; };
 		EC987DE6281BB220006FAEB1 /* ModalTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE5281BB220006FAEB1 /* ModalTopView.swift */; };
 		EC987DE8281BBBE0006FAEB1 /* ModalWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */; };
@@ -68,6 +69,7 @@
 		EC560F9B2824006A00F47E5E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EC560F9D282415DD00F47E5E /* viewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtension.swift; sourceTree = "<group>"; };
 		EC560F9F2824625100F47E5E /* writingListRow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writingListRow2.swift; sourceTree = "<group>"; };
+		EC560FA12824749B00F47E5E /* keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboard.swift; sourceTree = "<group>"; };
 		EC987DE3281BB204006FAEB1 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		EC987DE5281BB220006FAEB1 /* ModalTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTopView.swift; sourceTree = "<group>"; };
 		EC987DE7281BBBE0006FAEB1 /* ModalWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWordView.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				EC560F992823FB2100F47E5E /* ViewExtension.swift */,
 				EC560F9D282415DD00F47E5E /* viewExtension.swift */,
 				ECA093B02820267D00E4003E /* SizeReader.swift */,
+				EC560FA12824749B00F47E5E /* keyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				EC37E89D281AD73100DC61B1 /* obo_1App.swift in Sources */,
 				EC0346AE281C34DC00BF669D /* LogBulletView.swift in Sources */,
 				EC4F7C6D2822961200C72A61 /* PapagoTest.swift in Sources */,
+				EC560FA22824749B00F47E5E /* keyboard.swift in Sources */,
 				ECA093BF2821397100E4003E /* SentenceDataModel.xcdatamodeld in Sources */,
 				ECA093C228214CD200E4003E /* CoreDataManager.swift in Sources */,
 				EC4F7C6A2822496400C72A61 /* Dialogue.swift in Sources */,
@@ -459,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"obo_1/Preview Content\"";
+				DEVELOPMENT_TEAM = F66W26CJW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -487,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"obo_1/Preview Content\"";
+				DEVELOPMENT_TEAM = F66W26CJW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -16,7 +16,7 @@ struct ModalTopView: View {
             Text(dialogues.dialogue)
                 .font(.title2).bold()
 //                .font(.system(size: 20, weight: .bold))
-                .frame(maxWidth: .infinity, minHeight: 70, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top)
             
             Text(dialogues.mean)

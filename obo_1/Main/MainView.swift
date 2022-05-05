@@ -52,7 +52,11 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("OneByOne")
+                    HStack(spacing:0){
+                        Image("icon")
+                        Image("iconB")
+                        Image("icon")
+                    }
                 }
             }
         }

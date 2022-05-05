@@ -66,10 +66,12 @@ struct WritingView: View {
                                 TextEditor(text:$sentenceModified)
                                     .padding(2)
                                     .frame(maxWidth: .infinity)
+                                    .submitLabel(.done)
                             }
                             .background(sentenceModified.isEmpty ? Color.gray4 : Color.blackE)
                             .font(.body)
                             Button{
+                                UIApplication.shared.endEditing()
                                 testText = sentenceModified
                                 viewModel.requestAPI(sentence: testText) //왜 여기서 바로 결과가 나오지 않지?
                                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
@@ -106,12 +108,10 @@ struct WritingView: View {
                             
                         }//hstack
                         Spacer()
-                        let _ = print(sentencesNow,"_______sentencesNow", sentencesNow.isEmpty)
                         VStack {
                             if !sentencesNow.isEmpty {
                                 List{
                                     ForEach(sentencesNow, id: \.self) { sentence in
-                                        let _ = print(sentence)
                                         writingListRow2(
                                             availableWidth: $availableWidth,
                                             sentence: sentence)
@@ -134,11 +134,13 @@ struct WritingView: View {
                             }
                             
                         }
+                        .onAppear (perform : UIApplication.shared.hideKeyboard)
                     }
                 }//VStack
                 .onAppear{
                     populateSentences()
                 }
+                
                 .padding(.horizontal)
             }
             .padding(.horizontal)
