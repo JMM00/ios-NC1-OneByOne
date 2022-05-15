@@ -1,7 +1,5 @@
+<img width="1000" alt="Logo" src="https://user-images.githubusercontent.com/41153398/168471065-8cfcebae-422c-4480-b014-e222ef74fe57.png">
 
-
-
-## ![Logo](https://user-images.githubusercontent.com/41153398/168470599-1559a124-3cda-4938-8ce6-2ce95143a0fa.png)
 ## One by One
 
 Study English with movie lines.
