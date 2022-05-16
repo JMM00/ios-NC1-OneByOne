@@ -25,8 +25,8 @@ class ViewModel: ObservableObject {
         let paramData = param.data(using: .utf8)
         let Naver_URL = URL(string: "https://openapi.naver.com/v1/papago/n2mt")
         
-        let clientId = "dixNpmRUwQ_43mfCyGjH"
-        let clientSecret = "Rz0eZsZb6a"
+        let clientId = "아이디"
+        let clientSecret = "비밀번호?"
         
         var request = URLRequest(url: Naver_URL!)
         request.httpMethod = "POST"
